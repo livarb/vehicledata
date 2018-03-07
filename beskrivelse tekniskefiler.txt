@@ -1,0 +1,135 @@
+SPESIFIKASJON FOR UTLEVERING AV TEKNISKE DATA
+ 
+Typegodkjenninger                       
+                    
+Felt                         Type      Lengde    Startpos   
+Typegodkjenningsnr.          NUM       11        1                      Består av: godkj.nr (1-4), variant (6-7)  og år (8-11)
+Eu-hovednummer               AN        40        12                      
+Merkekode                    NUM       4         52                      
+Modellbetegnelse             AN        20        56                      
+Typebetegnelse               AN        20        76                      
+Kjøretøygruppe               NUM       3         96                      
+Ramme-karosseri              AN        70        99                      
+Motorytelse                  NUM       7         169                    De 2 siste er desimaler
+Slagvolum                    NUM       6         176                     
+Drivstoff                    NUM       2         182                     
+Lengde                       NUM       4         184                     
+Bredde                       NUM       3         188                     
+Std. dekk foran              AN        15        191                     
+Std. dekk bak                AN        15        206                     
+Std. felg foran              AN        8         221                     
+Std. felg bak                AN        8         229                     
+Min LI foran                 AN        9         237                     
+Min LI bak                   AN        9         246                     
+Min hast foran               AN        4         255                     
+Min hast bak                 AN        4         259                     
+Min innpress foran           NUM       4         263                     
+Min innpress bak             NUM       4         267                     
+Maks sporv foran             AN        4         271                     
+Maks sporv bak               AN        4         275                     
+Motormerking                 AN        30        279                     
+Girkasse                     AN        20        309                     
+Stand dB(A)                  NUM       3         329                     
+Omdreininger                 NUM       4         332                     
+Totalvekt                    NUM       6         336                     
+Egenvekt                     NUM       5         342                     
+Till. foraksellast           NUM       5         347                     
+Till. bakaksellast           NUM       6         352                     
+Variant                      AN        20        358                     
+Versjon                      AN        24        378                     
+Gyldig fra unr               AN        19        402                     
+Drivende hjul                AN        15        421                     
+Vognkort anm.                AN        60        436                     
+Identitet anm.               AN        60        496                     
+Antall aksler                NUM       2         556                     
+Antall aksler med drift      NUM       1         558                     
+Tilhengervekt m/brems        NUM       5         559                     
+Tilhengervekt u/brems        NUM       5         564                     
+Lengde til tilh.kobling      NUM       4         569                     
+Max. belastning h.feste      NUM       5         573                     
+Max. taklast                 NUM       4         578                     
+Vogntogvekt                  NUM       6         582                     
+Ytelsesmål                   NUM       1         588                    ukjent eller ikke ytelse, 1 = KW, 2 = HK
+Co2-utslipp    NUM 4         589        
+Sitteplasser totalt          NUM       2         593                     
+Fab.mont.  partikkelfilter   NUM       1         595                    1=nei, 2=ja,0=uoppgitt
+                    
+Total lengde på record: 595      
+ 
+ 
+Typegodkjente kjøretøy .                           
+                    
+Felt                         Type      Lengde    Startpos   
+Kjennemerke                  AN        7         1                       
+Understellsnummer            AN        19        8                       
+Reg. år (mod-år)             NUM       4         27                      
+Typegodkjenningsnr.          NUM       11        31                      
+Reg. førsteg. Norge          NUM       8         42                      
+Bruktimportert               NUM       1         50                     1 - dersom bruktimportert
+Avreg.dato                   NUM       8         51                      
+Farge                        AN        20        59                      
+Sist pkk-godkjent            NUM       8         79                      
+Neste PKK                    NUM       8         87                      
+Siste reg.dato               NUM       8         95                     nytt vognkort hvis > 20040601
+Reg. 1g. mnd-dag             NUM       4         103                     
+                    
+Total lengde på record: 106      
+                    
+                    
+Ikke typegodkjente kjøretøy:     
+                    
+Felt                         Type    Lengde      Startpos   
+Kjennemerke                  AN        7         1                       
+Understellsnummer            AN        19        8                       
+Reg. år (mod-år)             NUM       4         27                      
+Reg. førsteg. Norge          NUM       8         31                      
+Merkekode                    NUM       4         39                      
+Modellbetegnelse             AN        20        43                      
+Typebetegnelse               AN        20        63                      
+Kjøretøygruppe               NUM       3         83                      
+Motorytelse                  NUM       7         86                     De 2 siste er desimaler
+Slagvolum                    NUM       6         93                      
+Drivstoff                    NUM       2         99                      
+Lengde                       NUM       4         101                     
+Bredde                       NUM       3         105                     
+Std. dekk foran              AN        15        108                     
+Std. dekk bak                AN        15        123                     
+Std. felg forran             AN        8         138                     
+Std. felg bak                AN        8         146                     
+Min. LI foran                AN        9         154                     
+Min. LI bak                  AN        9         163                     
+Min. hast. foran             AN        4         172                     
+Min. hast. bak               AN        4         176                     
+Min. innpress foran          NUM       4         180                     
+Min. innpress bak            NUM       4         184                     
+Sporvidde foran              NUM       4         188                     
+Sporvidde bak                NUM       4         192                     
+Totalvekt                    NUM       6         196                     
+Egenvekt                     NUM       5         202                     
+Akseltrykk foran             NUM       5         207                     
+Akseltrykk bak               NUM       6         212                     
+EU-variant                   AN        20        218                     
+Eu-versjon                   AN        24        238                     
+Bruktimportert               NUM       1         262                    1 - dersom bruktimportert
+Avreg dato                   NUM       8         263                     
+Farge                        AN        20        271                     
+Antall aksler                NUM       2         291                     
+Antall aksler med drift      NUM       1         293                     
+Tilhengervekt m/brems        NUM       5         294                     
+Tilhengervekt u/brems        NUM       5         299                     
+Lengde til tilh.kobling      NUM       4         304                     
+Max. belastning h.feste      NUM       5         308                     
+Max. taklast                 NUM       4         313                     
+Vogntogvekt                  NUM       6         317                     
+Ytelsesmål                   NUM       1         323                    1 = KW, 2 = HK, ellers ukjent/mangler
+Sist pkk-godkjent            NUM       8         324                     
+Neste PKK                    NUM       8         332                     
+Siste reg.dato               NUM       8         340                    nytt vognkort hvis > 20040601
+Reg. 1g. mnd-dag             NUM       4         348                     
+Co2-utslipp                  NUM       4         352                     
+Euronorm                     AN        1         356        
+Sitteplasser totalt          NUM       2         357                     
+Fab.mont.  partikkelfilter   NUM       1         359                    1=nei, 2=ja,0=uoppgitt
+                    
+           359      
+                                                 
