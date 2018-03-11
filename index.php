@@ -54,28 +54,61 @@ foreach ($input as $files) {
 	$data = parseCSV($dataRaw);
 
 	$cardata = array();
-	$cardataRaw = file($dataFile);
+	$cardataRawFP = fopen($dataFile, "r");
 
 	print("<span id=\"" . $files[0] 
 		. "\"><b>" . $files[0] . "</b></span><br/>\n");
 
+	if (!$cardataRawFP) {
+		die("Kunne ikkje lese rådatafil: $dataFile");
+	}
 
+	$lineNum = 1;
+    while (($line = fgets($cardataRawFP)) !== false) {
 
-	foreach ($cardataRaw as $line) {
+		$lineLen = strlen($line);
+		// print($lineLen . "<br/>\n");
+		$arrCheck = array_fill(0, ($lineLen+1), '0');
+
 		$car = array();
 		foreach ($data as $attribute) {
+			// hentar ut rå verdi
 			$value = substr(
 				$line, 
 				($attribute["startpos"]-1), 
 				$attribute["lengde"]
 			);
+
+			// Fyller sjekk-array for linja
+			for ($i = $attribute["startpos"]; $i < ($attribute["startpos"] + $attribute["lengde"]); $i++) {
+				$arrCheck[$i] = '1';
+			}
+
+			// Kvalitetssjekk
+			if ($attribute["type"] == "NUM") {
+				if (!is_numeric($value)) {
+					print("$lineNum: " . $attribute["kortnamn"] . " er ikkje numerisk! $value <br/>\n");
+				}
+			}
+
+			// Konverterer data
 			if ($attribute["type"] == "NUM") {
 				$value = intval($value, 10);
 			}
-			$car[$attribute["kortnamn"]] = $value;
+			$car[$attribute["kortnamn"]] = trim($value);
+
 		}
 		$cardata[] = $car;
+
+		$arrCheckImploded = implode($arrCheck);
+		if (substr_count($arrCheckImploded, "0") != 3) {
+			print($lineNum . ": " . $arrCheckImploded . "<br/>\n");
+			print($line . "<br/>\n");
+		}
+	$lineNum++;
 	}
+
+
 
 	print("<table><tr><td><u>Data</u><br/>\n<pre>\n");
 	print_r($cardata);
