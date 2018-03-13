@@ -1,51 +1,51 @@
-kortnamn;felt;type;lengde;startpos;kommentar
-typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;1;"Består av: godkj.nr (1-4), variant (6-7) og år (8-11)"
-eu_hovednummer;Eu-hovednummer;AN;40;12;
-merkekode;Merkekode;NUM;4;52;
-modellbetegnelse;Modellbetegnelse;AN;20;56;
-typebetegnelse;Typebetegnelse;AN;20;76;
-kjoretoygruppe;Kjøretøygruppe;NUM;3;96;
-ramme_karosseri;Ramme-karosseri;AN;70;99;
-motorytelse;Motorytelse;NUM;7;169;De 2 siste er desimaler
-slagvolum;Slagvolum;NUM;6;176;
-drivstoff;Drivstoff;NUM;2;182;
-lengde;Lengde;NUM;4;184;
-bredde;Bredde;NUM;3;188;
-std_dekk_foran;"Std. dekk foran";AN;15;191;
-std_dekk_bak;"Std. dekk bak";AN;15;206;
-std_felg_foran;"Std. felg foran";AN;8;221;
-std_felg_bak;"Std. felg bak";AN;8;229;
-min_li_foran;"Min LI foran";AN;9;237;
-min_li_bak;"Min LI bak";AN;9;246;
-min_hast_foran;"Min hast foran";AN;4;255;
-min_hast_bak;"Min hast bak";AN;4;259;
-min_innpress_foran;"Min innpress foran";NUM;4;263;
-min_innpress_bak;"Min innpress bak";NUM;4;267;
-maks_sporv_foran;"Maks sporv foran";AN;4;271;
-maks_sporv_bak;"Maks sporv bak";AN;4;275;
-motormerking;Motormerking;AN;30;279;
-girkasse;Girkasse;AN;20;309;
-stand_dba;"Stand dB(A)";NUM;3;329;
-omdreininger;Omdreininger;NUM;4;332;
-totalvekt;Totalvekt;NUM;6;336;
-egenvekt;Egenvekt;NUM;5;342;
-till_foraksellast;"Till. foraksellast";NUM;5;347;
-till_bakaksellast;"Till. bakaksellast";NUM;6;352;
-variant;Variant;AN;20;358;
-versjon;Versjon;AN;24;378;
-gyldig_fra_unr;"Gyldig fra unr";AN;19;402;
-drivende_hjul;"Drivende hjul";AN;15;421;
-vognkort_anm;"Vognkort anm.";AN;60;436;
-identitet_anm;"Identitet anm.";AN;60;496;
-antall_aksler;"Antall aksler";NUM;2;556;
-antall_aksler_drift;"Antall aksler med drift";NUM;1;558;
-tilhengervekt_m_brems;"Tilhengervekt m/brems";NUM;5;559;
-tilhengervekt_u_brem;"Tilhengervekt u/brems";NUM;5;564;
-lengde_til_tilhkobling;"Lengde til tilh.kobling";NUM;4;569;
-max_belastning_h_feste;"Max. belastning h.feste";NUM;5;573;
-max_taklast;"Max. taklast";NUM;4;578;
-vogntogvekt;Vogntogvekt;NUM;6;582;
-ytelsesmaal;"Ytelsesmål";NUM;1;588;"ukjent eller ikke ytelse, 1 = KW, 2 = HK"
-co2_utslipp;"Co2-utslipp";NUM;4;589;
-sitteplasser;"Sitteplasser totalt";NUM;2;593;
-fab_mont_partikkelfilter;"Fab.mont. partikkelfilter";NUM;1;595;"1=nei, 2=ja,0=uoppgitt"
+kortnamn;felt;type;lengde;startpos;searchable;groupable;kommentar
+typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;1;;;"Består av: godkj.nr (1-4), variant (6-7) og år (8-11)"
+eu_hovednummer;Eu-hovednummer;AN;40;12;;;
+merkekode;Merkekode;NUM;4;52;;;
+modellbetegnelse;Modellbetegnelse;AN;20;56;;;
+typebetegnelse;Typebetegnelse;AN;20;76;;;
+kjoretoygruppe;Kjøretøygruppe;NUM;3;96;;;
+ramme_karosseri;Ramme-karosseri;AN;70;99;;;
+motorytelse;Motorytelse;NUM;7;169;;;De 2 siste er desimaler
+slagvolum;Slagvolum;NUM;6;176;;;
+drivstoff;Drivstoff;NUM;2;182;;;
+lengde;Lengde;NUM;4;184;;;
+bredde;Bredde;NUM;3;188;;;
+std_dekk_foran;"Std. dekk foran";AN;15;191;;;
+std_dekk_bak;"Std. dekk bak";AN;15;206;;;
+std_felg_foran;"Std. felg foran";AN;8;221;;;
+std_felg_bak;"Std. felg bak";AN;8;229;;;
+min_li_foran;"Min LI foran";AN;9;237;;;
+min_li_bak;"Min LI bak";AN;9;246;;;
+min_hast_foran;"Min hast foran";AN;4;255;;;
+min_hast_bak;"Min hast bak";AN;4;259;;;
+min_innpress_foran;"Min innpress foran";NUM;4;263;;;
+min_innpress_bak;"Min innpress bak";NUM;4;267;;;
+maks_sporv_foran;"Maks sporv foran";AN;4;271;;;
+maks_sporv_bak;"Maks sporv bak";AN;4;275;;;
+motormerking;Motormerking;AN;30;279;;;
+girkasse;Girkasse;AN;20;309;;;
+stand_dba;"Stand dB(A)";NUM;3;329;;;
+omdreininger;Omdreininger;NUM;4;332;;;
+totalvekt;Totalvekt;NUM;6;336;;;
+egenvekt;Egenvekt;NUM;5;342;;;
+till_foraksellast;"Till. foraksellast";NUM;5;347;;;
+till_bakaksellast;"Till. bakaksellast";NUM;6;352;;;
+variant;Variant;AN;20;358;;;
+versjon;Versjon;AN;24;378;;;
+gyldig_fra_unr;"Gyldig fra unr";AN;19;402;;;
+drivende_hjul;"Drivende hjul";AN;15;421;;;
+vognkort_anm;"Vognkort anm.";AN;60;436;;;
+identitet_anm;"Identitet anm.";AN;60;496;;;
+antall_aksler;"Antall aksler";NUM;2;556;;;
+antall_aksler_drift;"Antall aksler med drift";NUM;1;558;;;
+tilhengervekt_m_brems;"Tilhengervekt m/brems";NUM;5;559;;;
+tilhengervekt_u_brem;"Tilhengervekt u/brems";NUM;5;564;;;
+lengde_til_tilhkobling;"Lengde til tilh.kobling";NUM;4;569;;;
+max_belastning_h_feste;"Max. belastning h.feste";NUM;5;573;;;
+max_taklast;"Max. taklast";NUM;4;578;;;
+vogntogvekt;Vogntogvekt;NUM;6;582;;;
+ytelsesmaal;"Ytelsesmål";NUM;1;588;;;"ukjent eller ikke ytelse, 1 = KW, 2 = HK"
+co2_utslipp;"Co2-utslipp";NUM;4;589;;;
+sitteplasser;"Sitteplasser totalt";NUM;2;593;;;
+fab_mont_partikkelfilter;"Fab.mont. partikkelfilter";NUM;1;595;;;"1=nei, 2=ja,0=uoppgitt"

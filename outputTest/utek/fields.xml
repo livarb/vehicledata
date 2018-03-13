@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><datasetFields>
+  <fields>
+    <field>
+      <name>Kjennemerke</name>
+      <shortName>kjennemerke</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Understellsnummer</name>
+      <shortName>understellsnr</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Reg. år (mod-år)</name>
+      <shortName>reg_aar</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Typegodkjenningsnr.</name>
+      <shortName>typegodkjenningsnr</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Reg. førsteg. Norge</name>
+      <shortName>reg_forsteg_norge</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Bruktimportert</name>
+      <shortName>bruktimportert</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>1 - dersom bruktimportert</content>
+    </field>
+    <field>
+      <name>Avreg.dato</name>
+      <shortName>avreg_dato</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Farge</name>
+      <shortName>farge</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sist pkk-godkjent</name>
+      <shortName>sist_pkk_godkjent</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Neste PKK"</name>
+      <shortName>neste_pkk</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Siste reg.dato</name>
+      <shortName>siste_reg_dato</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>nytt vognkort hvis > 20040601</content>
+    </field>
+    <field>
+      <name>Reg. 1g. mnd-dag</name>
+      <shortName>reg_1g_mnd_dag</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+  </fields>
+</datasetFields>

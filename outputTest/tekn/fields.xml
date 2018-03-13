@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><datasetFields>
+  <fields>
+    <field>
+      <name>Kjennemerke</name>
+      <shortName>kjennemerke</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Understellsnummer</name>
+      <shortName>understellsnr</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Reg. år (mod-år)</name>
+      <shortName>reg_aar</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Reg. førsteg. Norge</name>
+      <shortName>reg_forsteg_norge</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Merkekode</name>
+      <shortName>merkekode</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Modellbetegnelse</name>
+      <shortName>modellbetegnelse</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Typebetegnelse</name>
+      <shortName>typebetegnelse</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Kjøretøygruppe</name>
+      <shortName>kjoretoygruppe</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Motorytelse</name>
+      <shortName>motorytelse</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>De 2 siste er desimaler</content>
+    </field>
+    <field>
+      <name>Slagvolum</name>
+      <shortName>slagvolum</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Drivstoff</name>
+      <shortName>drivstoff</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Lengde</name>
+      <shortName>lengde</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Bredde</name>
+      <shortName>bredde</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Std. dekk foran</name>
+      <shortName>std_dekk_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Std. dekk bak</name>
+      <shortName>std_dekk_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Std. felg forran</name>
+      <shortName>std_felg_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Std. felg bak</name>
+      <shortName>std_felg_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Min. LI foran</name>
+      <shortName>min_li_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Min. LI bak</name>
+      <shortName>min_li_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Min. hast. foran</name>
+      <shortName>min_hast_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Min. hast. bak</name>
+      <shortName>min_hast_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Min. innpress foran</name>
+      <shortName>min_innpress_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Min. innpress bak</name>
+      <shortName>min_innpress_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sporvidde foran</name>
+      <shortName>sporvidde_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sporvidde bak</name>
+      <shortName>sporvidde_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Totalvekt</name>
+      <shortName>totalvekt</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Egenvekt</name>
+      <shortName>egenvekt</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Akseltrykk foran</name>
+      <shortName>akseltrykk_foran</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Akseltrykk bak</name>
+      <shortName>akseltrykk_bak</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>EU-variant</name>
+      <shortName>eu_variant</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Eu-versjon</name>
+      <shortName>eu_versjon</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Bruktimportert</name>
+      <shortName>bruktimportert</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>1 - dersom bruktimportert</content>
+    </field>
+    <field>
+      <name>Avreg dato</name>
+      <shortName>avreg_dato</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Farge</name>
+      <shortName>farge</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Antall aksler</name>
+      <shortName>antall_aksler</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Antall aksler med drift</name>
+      <shortName>antall_aksler_drift</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Tilhengervekt m/brems</name>
+      <shortName>tilhengervek_m_brems</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Tilhengervekt u/brems</name>
+      <shortName>tilhengervekt_u_brems</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Lengde til tilh.kobling</name>
+      <shortName>lengde_til_tilhkobling</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Max. belastning h.feste</name>
+      <shortName>max_belastning_h_fest</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Max. taklast</name>
+      <shortName>max_taklast</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Vogntogvekt</name>
+      <shortName>vogntogvekt</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Ytelsesmål</name>
+      <shortName>ytelsesmaal</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>1 = KW, 2 = HK, ellers ukjent/mangler</content>
+    </field>
+    <field>
+      <name>Sist pkk-godkjent</name>
+      <shortName>sist_pkk_godkjent</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Neste PKK</name>
+      <shortName>neste_pkk</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Siste reg.dato</name>
+      <shortName>siste_reg_dato</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>nytt vognkort hvis > 20040601</content>
+    </field>
+    <field>
+      <name>Reg. 1g. mnd-dag</name>
+      <shortName>reg1g</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Co2-utslipp</name>
+      <shortName>co2_utslippp</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Euronorm</name>
+      <shortName>euronorm</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sitteplasser totalt</name>
+      <shortName>sitteplasser</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Fab.mont. partikkelfilter</name>
+      <shortName>fab_mont_partikkelfilter</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>1=nei, 2=ja,0=uoppgitt</content>
+    </field>
+  </fields>
+</datasetFields>

@@ -4,17 +4,19 @@
 define("TESTMODE", true);
 
 if (TESTMODE) {
-	define("WRITECSV", false);	
+	define("WRITECSV", false);
+	define("WRITEMETA", false);
 	define("DEBUG", true);
 	define("DEBUG_LINELENGTH", false);	
 	define("OUTPUT", true);
+	define("OUTPUT_STRUKTUR", true);	
 	define("OUTPUTDIR", "outputTest/");
 
 	$input = array(
 		array(
-			"tekn",
-			"struktur_tekn.csv",
-			"tekntest.txt"
+			"tekn", // tittel, katalognavn
+			"struktur_tekn.csv", // struktur-fil
+			"tekntest.txt" // data-fil
 		), array(
 			"typg",
 			"struktur_typg.csv",
@@ -27,10 +29,12 @@ if (TESTMODE) {
 	);
 
 } else {
-	define("WRITECSV", false);	
+	define("WRITECSV", true);
+	define("WRITEMETA", true);
 	define("DEBUG", true);
 	define("DEBUG_LINELENGTH", false);
 	define("OUTPUT", false);
+	define("OUTPUT_STRUKTUR", false);
 	define("OUTPUTDIR", "output/");
 
 	$input = array(
@@ -51,6 +55,13 @@ if (TESTMODE) {
 	);	
 }
 
+// http://php.net/manual/en/function.microtime.php
+function microtime_float() {
+    list($usec, $sec) = explode(" ", microtime());
+    return ((float)$usec + (float)$sec);
+}
+
+$time_start = microtime(true);
 
 function parseCSV($data) {
 	$csv = array_map('str_getcsv_custom', $data);
@@ -65,13 +76,52 @@ function str_getcsv_custom($array) {
 	return str_getcsv($array, ";");
 }
 
-// http://php.net/manual/en/function.microtime.php
-function microtime_float() {
-    list($usec, $sec) = explode(" ", microtime());
-    return ((float)$usec + (float)$sec);
+function createFieldsText($fields) {
+	$d = "  "; // delimiter
+	$text = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+	$text .= "<datasetFields>\n";
+	$text .= "$d<fields>\n";
+
+	foreach($fields as $f) {
+		$searchable = empty($f["searchable"]) ? "false" : $f["searchable"];
+		$groupable = empty($f["groupable"]) ? "false" : $f["groupable"];
+
+		$text .= ($d.$d . "<field>\n");
+		$text .= ($d.$d.$d . "<name>" . $f["felt"] . "</name>\n");
+		$text .= ($d.$d.$d . "<shortName>" . $f["kortnamn"] . "</shortName>\n");
+		$text .= ($d.$d.$d . "<groupable>" . $groupable . "</groupable>\n");
+		$text .=($d.$d.$d . "<searchable>" . $searchable . "</searchable>\n");
+		$text .=($d.$d.$d . "<content>" . $f["kommentar"] . "</content>\n");	
+		$text .=($d.$d . "</field>\n");
+	}
+	$text .= "$d</fields>\n</datasetFields>\n";
+	return $text;
 }
 
-$time_start = microtime(true);
+function createMetaText($title) {
+	$text = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+
+	$text .= "<metadata>\n"
+		. "\t<name>$title</name>\n"
+		. "\t<updated>" . time() . "</updated>\n"
+		. "\t<active>false</active>\n"
+		. "</metadata>\n";
+	return $text;
+}
+
+function prepareOutputDir($dir) {
+	if (!is_dir($dir)) {
+		mkdir($dir);
+	}
+}
+
+function getFilePointer($filename) {
+	$fp = fopen($filename, "w");
+	if (!$fp) {
+		die("Kunne ikkje opne skrivetilgang til fil: $fp");
+	}
+	return $fp;
+}
 
 ?>
 
@@ -106,14 +156,10 @@ foreach ($input as $files) {
 	if (WRITECSV) {
 		// Open CSV-output-file
 		$csvFileDir = OUTPUTDIR . $files[0];
-		if (!is_dir($csvFileDir)) {
-			mkdir($csvFileDir);
-		}
+		prepareOutputDir($csvFileDir);
+
 		$csvOutputFile = $csvFileDir . "/dataset.csv";
-		$csvOutputFP = fopen($csvOutputFile, "w");
-		if (!$csvOutputFP) {
-			die("Kunne ikkje opne skrivetilgang til CSV-fil: $csvOutputFile");	
-		}
+		$csvOutputFP = getFilePointer($csvOutputFile);
 
 		// Write CSV-header-line
 		$headerColumns = array();
@@ -124,6 +170,23 @@ foreach ($input as $files) {
 		fwrite($csvOutputFP, $headerLine . "\n");
 	}
 
+	if (WRITEMETA) {
+		$fileDir = OUTPUTDIR . $files[0];
+		prepareOutputDir($fileDir);
+
+		$metaXmlOutputFile = $fileDir . "/meta.xml";
+		$metaXmlOutputFP = getFilePointer($metaXmlOutputFile);
+		$metaXmlData = createMetaText($files[0]);
+		fwrite($metaXmlOutputFP, $metaXmlData);
+		fclose($metaXmlOutputFP);
+
+		$fieldsXmlOutputFile = $fileDir . "/fields.xml";
+		$fieldsXmlOutputFP = getFilePointer($fieldsXmlOutputFile);
+		$fieldsXmlData = createFieldsText($data);
+		fwrite($fieldsXmlOutputFP, $fieldsXmlData);
+		fclose($fieldsXmlOutputFP);
+	}
+
 	print("<span id=\"" . $files[0] 
 		. "\"><b>" . $files[0] . "</b></span><br/>\n");
 
@@ -132,8 +195,11 @@ foreach ($input as $files) {
 	$lineNum = 1;
     while (($line = fgets($cardataRawFP)) !== false) {
 
-		// $lineNum++;
-		// continue;
+
+    	if (!(DEBUG || WRITECSV || DEBUG_LINELENGTH)) {
+    		$lineNum++;
+    		continue;
+    	}
 
 		$lineLen = strlen($line);
 
@@ -188,7 +254,10 @@ foreach ($input as $files) {
 				$value_trimmed = trim($value);
 				if (strlen($value_trimmed) > 0) {
 					$value_trimmed = str_replace('"', '\"', $value_trimmed);
-					$value = '"' . $value_trimmed . '"';
+					$value = '"' 
+						// utf8_encode for æøå
+						. utf8_encode($value_trimmed)
+						. '"';
 				} else {
 					$value = "";
 				}
@@ -200,6 +269,7 @@ foreach ($input as $files) {
 			// print("XX: " . $line . "\n");
 			print($lineNum . "\n");
 			flush();
+			ob_flush();
 		}
 
 		// Write to CSV
@@ -236,9 +306,14 @@ foreach ($input as $files) {
 	// print_r($cardata);
 	print("</pre></td>\n");
 
-	print("<td><u>Struktur</u><br/>\n<pre>\n");
-	// print_r($data);
-	print("</pre></td></tr></table><br/><br/>\n\n");
+	if (OUTPUT_STRUKTUR) {
+		print("<td><u>Struktur</u><br/>\n<pre>\n");
+		print_r($data);
+		print("</pre></td>");
+	}
+	print("</tr></table><br/><br/>\n\n");
+	flush();
+	ob_flush();
 } 
 
 $time_end = microtime(true);
