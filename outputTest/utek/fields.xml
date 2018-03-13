@@ -3,42 +3,42 @@
     <field>
       <name>Kjennemerke</name>
       <shortName>kjennemerke</shortName>
-      <groupable>false</groupable>
-      <searchable>false</searchable>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
       <content></content>
     </field>
     <field>
       <name>Understellsnummer</name>
       <shortName>understellsnr</shortName>
-      <groupable>false</groupable>
-      <searchable>false</searchable>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
       <content></content>
     </field>
     <field>
       <name>Reg. år (mod-år)</name>
       <shortName>reg_aar</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Typegodkjenningsnr.</name>
       <shortName>typegodkjenningsnr</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Reg. førsteg. Norge</name>
       <shortName>reg_forsteg_norge</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Bruktimportert</name>
       <shortName>bruktimportert</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content>1 - dersom bruktimportert</content>
     </field>
@@ -52,7 +52,7 @@
     <field>
       <name>Farge</name>
       <shortName>farge</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>

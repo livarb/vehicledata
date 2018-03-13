@@ -1,12 +1,12 @@
 kortnamn;felt;type;lengde;startpos;searchable;groupable;kommentar
 kjennemerke;Kjennemerke;AN;7;1;true;true;
-understellsnr;Understellsnummer;AN;19;8;;;
-reg_aar;"Reg. år (mod-år)";NUM;4;27;;;
-reg_forsteg_norge;"Reg. førsteg. Norge";NUM;8;31;;;
+understellsnr;Understellsnummer;AN;19;8;true;true;
+reg_aar;"Reg. år (mod-år)";NUM;4;27;;true;
+reg_forsteg_norge;"Reg. førsteg. Norge";NUM;8;31;;true;
 merkekode;Merkekode;NUM;4;39;;;
 modellbetegnelse;Modellbetegnelse;AN;20;43;;;
-typebetegnelse;Typebetegnelse;AN;20;63;;;
-kjoretoygruppe;Kjøretøygruppe;NUM;3;83;;;
+typebetegnelse;Typebetegnelse;AN;20;63;;true;
+kjoretoygruppe;Kjøretøygruppe;NUM;3;83;;true;
 motorytelse;Motorytelse;NUM;7;86;;;"De 2 siste er desimaler"
 slagvolum;Slagvolum;NUM;6;93;;;
 drivstoff;Drivstoff;NUM;2;99;;;

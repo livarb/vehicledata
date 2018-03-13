@@ -3,8 +3,8 @@
     <field>
       <name>Typegodkjenningsnr.</name>
       <shortName>typegodkjenningsnr</shortName>
-      <groupable>false</groupable>
-      <searchable>false</searchable>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
       <content>Består av: godkj.nr (1-4), variant (6-7) og år (8-11)</content>
     </field>
     <field>
@@ -31,14 +31,14 @@
     <field>
       <name>Typebetegnelse</name>
       <shortName>typebetegnelse</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Kjøretøygruppe</name>
       <shortName>kjoretoygruppe</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>

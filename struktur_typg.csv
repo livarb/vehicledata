@@ -1,10 +1,10 @@
 kortnamn;felt;type;lengde;startpos;searchable;groupable;kommentar
-typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;1;;;"Består av: godkj.nr (1-4), variant (6-7) og år (8-11)"
+typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;1;true;true;"Består av: godkj.nr (1-4), variant (6-7) og år (8-11)"
 eu_hovednummer;Eu-hovednummer;AN;40;12;;;
 merkekode;Merkekode;NUM;4;52;;;
 modellbetegnelse;Modellbetegnelse;AN;20;56;;;
-typebetegnelse;Typebetegnelse;AN;20;76;;;
-kjoretoygruppe;Kjøretøygruppe;NUM;3;96;;;
+typebetegnelse;Typebetegnelse;AN;20;76;;true;
+kjoretoygruppe;Kjøretøygruppe;NUM;3;96;;true;
 ramme_karosseri;Ramme-karosseri;AN;70;99;;;
 motorytelse;Motorytelse;NUM;7;169;;;De 2 siste er desimaler
 slagvolum;Slagvolum;NUM;6;176;;;

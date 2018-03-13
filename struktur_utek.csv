@@ -1,12 +1,12 @@
 kortnamn;felt;type;lengde;startpos;searchable;groupable;kommentar
-kjennemerke;Kjennemerke;AN;7;1;;;
-understellsnr;Understellsnummer;AN;19;8;;;
-reg_aar;"Reg. år (mod-år)";NUM;4;27;;;
-typegodkjenningsnr;"Typegodkjenningsnr.";NUM;11;31;;;
-reg_forsteg_norge;"Reg. førsteg. Norge";NUM;8;42;;;
-bruktimportert;Bruktimportert;NUM;1;50;;;"1 - dersom bruktimportert"
+kjennemerke;Kjennemerke;AN;7;1;true;true;
+understellsnr;Understellsnummer;AN;19;8;true;true;
+reg_aar;"Reg. år (mod-år)";NUM;4;27;;true;
+typegodkjenningsnr;"Typegodkjenningsnr.";NUM;11;31;;true;
+reg_forsteg_norge;"Reg. førsteg. Norge";NUM;8;42;;true;
+bruktimportert;Bruktimportert;NUM;1;50;;true;"1 - dersom bruktimportert"
 avreg_dato;Avreg.dato;NUM;8;51;;;
-farge;Farge;AN;20;59;;;
+farge;Farge;AN;20;59;;true;
 sist_pkk_godkjent;"Sist pkk-godkjent";NUM;8;79;;;
 neste_pkk;Neste PKK";NUM;8;87;;;
 siste_reg_dato;"Siste reg.dato";NUM;8;95;;;"nytt vognkort hvis > 20040601"
