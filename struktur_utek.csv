@@ -6,8 +6,9 @@ typegodkjenningsnr;"Typegodkjenningsnr.";NUM;11;31;;true;
 reg_forsteg_norge;"Reg. førsteg. Norge";NUM;8;42;;true;
 bruktimportert;Bruktimportert;NUM;1;50;;true;"1 - dersom bruktimportert"
 avreg_dato;Avreg.dato;NUM;8;51;;;
-farge;Farge;AN;20;59;;true;
+farge;Farge;AN;20;59;;true;TODO: bør henvise til at dette er eit kontrollert vokabular
 sist_pkk_godkjent;"Sist pkk-godkjent";NUM;8;79;;;
 neste_pkk;Neste PKK";NUM;8;87;;;
 siste_reg_dato;"Siste reg.dato";NUM;8;95;;;"nytt vognkort hvis > 20040601"
 reg_1g_mnd_dag;"Reg. 1g. mnd-dag";NUM;4;103;;;
+vrakpant_utbetalt;Dato for utbetalt vrakpant;NUM;8;107;;;Kun utfyllt dersom kjøretøy er vraket

@@ -6,7 +6,7 @@ modellbetegnelse;Modellbetegnelse;AN;20;56;;;
 typebetegnelse;Typebetegnelse;AN;20;76;;true;
 kjoretoygruppe;Kjøretøygruppe;NUM;3;96;;true;
 ramme_karosseri;Ramme-karosseri;AN;70;99;;;
-motorytelse;Motorytelse;NUM;7;169;;;De 2 siste er desimaler
+motorytelse;Motorytelse;DEC2;7;169;;;
 slagvolum;Slagvolum;NUM;6;176;;;
 drivstoff;Drivstoff;NUM;2;182;;;
 lengde;Lengde;NUM;4;184;;;
@@ -49,3 +49,9 @@ ytelsesmaal;"Ytelsesmål";NUM;1;588;;;"ukjent eller ikke ytelse, 1 = KW, 2 = HK"
 co2_utslipp;"Co2-utslipp";NUM;4;589;;;
 sitteplasser;"Sitteplasser totalt";NUM;2;593;;;
 fab_mont_partikkelfilter;"Fab.mont. partikkelfilter";NUM;1;595;;;"1=nei, 2=ja,0=uoppgitt"
+typg_euronorm;Euronorm;AN;2;596;;;L i posisjon 2 er lette kjt., T i posisjon 2 er tunge kjt.
+typg_hybrid;Hybrid/Ikke hybrid;AN;1;598;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
+typg_hybrid_kategori;Type hybrid;AN;1;599;;;1=PLGIN, 2=NOPLG, X=N.A (not applicable)., Z=Annet
+typg_drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;600;;;L/100km
+typg_partikkelutslipp;Partikkelutslipp;DEC4;5;603;;;g/km for Lett euronorm, g/kwt for Tung euronorm
+typg_nox_utslipp;NOX-utslipp;DEC4;5;608;;;

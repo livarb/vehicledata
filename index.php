@@ -14,17 +14,20 @@ if (TESTMODE) {
 
 	$input = array(
 		array(
-			"tekn", // tittel, katalognavn
+			"tekn", // katalognavn
 			"struktur_tekn.csv", // struktur-fil
-			"tekntest.txt" // data-fil
+			"tekntest.txt", // data-fil
+			"Kjøretøy - enkeltgodkjente" // datasett-tittel (meta.xml)
 		), array(
 			"typg",
 			"struktur_typg.csv",
-			"typgtest.txt"
+			"typgtest.txt",
+			"Typegodkjenninger for kjøretøy"
 		), array(
 			"utek",
 			"struktur_utek.csv",
-			"utektest.txt"
+			"utektest.txt",
+			"Kjøretøy - typegodkjente"
 		)
 	);
 
@@ -41,18 +44,21 @@ if (TESTMODE) {
 		array(
 			"tekn",
 			"struktur_tekn.csv",
-			"completeRaw/tekninfo.txt"
+			"completeRaw/tekninfo",
+			"Kjøretøy - enkeltgodkjente"
 		)
 		, array(
 			"typg",
 			"struktur_typg.csv",
-			"completeRaw/typginfo.txt"
+			"completeRaw/typginfo",
+			"Typegodkjenninger for kjøretøy"
 		), array(
 			"utek",
 			"struktur_utek.csv",
-			"completeRaw/utekinfo.txt"
+			"completeRaw/utekinfo",
+			"Kjøretøy - typegodkjente"
 		)
-	);	
+	);
 }
 
 // http://php.net/manual/en/function.microtime.php
@@ -62,6 +68,16 @@ function microtime_float() {
 }
 
 $time_start = microtime(true);
+
+// http://stackoverflow.com/a/10473026
+function startsWith($haystack, $needle) {
+    // search backwards starting from haystack length characters from the end
+    return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
+}
+function endsWith($haystack, $needle) {
+    // search forward starting from end minus needle length characters
+    return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== FALSE);
+}
 
 function parseCSV($data) {
 	$csv = array_map('str_getcsv_custom', $data);
@@ -176,7 +192,7 @@ foreach ($input as $files) {
 
 		$metaXmlOutputFile = $fileDir . "/meta.xml";
 		$metaXmlOutputFP = getFilePointer($metaXmlOutputFile);
-		$metaXmlData = createMetaText($files[0]);
+		$metaXmlData = createMetaText($files[3]);
 		fwrite($metaXmlOutputFP, $metaXmlData);
 		fclose($metaXmlOutputFP);
 
@@ -195,6 +211,8 @@ foreach ($input as $files) {
 	$lineNum = 1;
     while (($line = fgets($cardataRawFP)) !== false) {
 
+    	// renew PHP-script timeout to keep going
+    	set_time_limit(2);
 
     	if (!(DEBUG || WRITECSV || DEBUG_LINELENGTH)) {
     		$lineNum++;
@@ -204,7 +222,8 @@ foreach ($input as $files) {
 		$lineLen = strlen($line);
 
 		if (DEBUG_LINELENGTH) {
-			$arrCheck = array_fill(0, ($lineLen+1), '0');
+			// minus 1 linelength
+			$arrCheck = array_fill(0, ($lineLen-1), '0');
 		}
 
 		$lineErrors = false;
@@ -218,15 +237,25 @@ foreach ($input as $files) {
 				$attribute["lengde"]
 			);
 
+			if ($value === FALSE) {
+				$lineErrors = true;
+				print("The line was too short!\n");
+				print("Length: " . strlen($line) . " Attempted startpos: " . ($attribute["startpos"] - 1) . "\n");
+				break;
+			}
+
 			// Fyller sjekk-array for linja
 			if (DEBUG_LINELENGTH) {
-				for ($i = $attribute["startpos"]; $i < ($attribute["startpos"] + $attribute["lengde"]); $i++) {
+				for ($i = $attribute["startpos"] - 1; $i < ($attribute["startpos"] + $attribute["lengde"]); $i++) {
 					$arrCheck[$i] = '1';
 				}
 			}
 
 			// Kvalitetssjekk
-			if (DEBUG && $attribute["type"] == "NUM") {
+			if (DEBUG && 
+				($attribute["type"] == "NUM"
+				|| startsWith($attribute["type"], "DEC")
+			)) {
 				if (!is_numeric($value)) {
 					// print("$lineNum: " 
 					// 	. $attribute["kortnamn"] 
@@ -239,16 +268,18 @@ foreach ($input as $files) {
 
 			// Konverterer data
 			if ($attribute["type"] == "NUM") {
-				if ($attribute["kortnamn"] == "motorytelse") {
-					$heilDel = intval(substr($value, 0, -2));
-					$desimaler = substr($value, -2);
-					if ($desimaler == "00") {
-						$value = $heilDel;
-					} else {
-						$value = $heilDel . "," . $desimaler;
-					}
+				$value = intval($value, 10);
+			} else if (startsWith($attribute["type"], "DEC")) {
+				$numDecimals = intval(
+					substr($attribute["type"], 3)
+				);
+
+				$heilDel = intval(substr($value, 0, -($numDecimals)));
+				$desimalDel = substr($value, -($numDecimals));
+				if (preg_match("/^[0]++$/", $desimalDel)) {
+					$value = $heilDel;
 				} else {
-					$value = intval($value, 10);
+					$value = $heilDel . "," . $desimalDel;
 				}
 			} else {
 				$value_trimmed = trim($value);
@@ -285,7 +316,7 @@ foreach ($input as $files) {
 			$zeroes = substr_count($arrCheckImploded, "0");
 			$ones = substr_count($arrCheckImploded, "1");
 
-			if ($zeroes != 3) {
+			if ($zeroes > 0) {
 				print($lineNum . ": Dekningssjekk. Linjelengede: $lineLen , 0: $zeroes, 1: $ones\n" . $arrCheckImploded . "\n");
 				print($line . "<br/>\n");
 			}
