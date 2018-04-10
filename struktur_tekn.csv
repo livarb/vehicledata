@@ -50,10 +50,10 @@ co2_utslippp;"Co2-utslipp";NUM;4;352;;;
 euronorm;"Euronorm";AN;1;356;;;
 sitteplasser;"Sitteplasser totalt";NUM;2;357;;;
 fab_mont_partikkelfilter;"Fab.mont. partikkelfilter";NUM;1;359;;;"1=nei, 2=ja,0=uoppgitt"
-tekn_euronorm_ny;Euronorm;AN;2;360;;;"""L"" i posisjon 2 er lette kjt., ""T"" i posisjon 2 er tunge kjt. Se egen fane"
-tekn_hybrid;Hybrid/Ikke hybrid;AN;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
-tekn_hybrid_kategori;Type hybrid;AN;1;363;;;1=PLGIN, 2=NOPLG, X=N.A (not applicable)., Z=Annet
-tekn_drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;364;;;Angis i l/100km og gjelder komibinert forbruk (ikke nødvendigvis oppgitt)
-tekn_partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;g/km for Lett euronorm, g/kwt for Tung euronorm
-tekn_nox_utslipp;NOX-utslipp;DEC4;5;372;;;g/km
-tekn_vrakpant_utbetalt;Dato for utbetalt vrakpant;NUM;8;377;;;Kun utfyllt dersom kjøretøyet er vraket
+euronorm_ny;Euronorm;AN;2;360;;;"""L"" i posisjon 2 er lette kjt., ""T"" i posisjon 2 er tunge kjt. Se egen fane"
+hybrid;Hybrid/Ikke hybrid;AN;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
+hybrid_kategori;Type hybrid;AN;1;363;;;1=PLGIN, 2=NOPLG, X=N.A (not applicable)., Z=Annet
+drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;364;;;Angis i l/100km og gjelder komibinert forbruk (ikke nødvendigvis oppgitt)
+partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;g/km for Lett euronorm, g/kwt for Tung euronorm
+nox_utslipp;NOX-utslipp;DEC4;5;372;;;g/km
+vrakpant_utbetalt;Dato for utbetalt vrakpant;NUM;8;377;;;Kun utfyllt dersom kjøretøyet er vraket
