@@ -50,10 +50,10 @@ co2_utslippp;Co2-utslipp;NUM;4;352;;;oppgis i gram pr.kilometer
 euronorm;Euronorm;AN;1;356;;;
 sitteplasser;Sitteplasser totalt;NUM;2;357;;;
 fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;359;;;1=nei, 2=ja,0=uoppgitt
-euronorm-ny;Euronorm;AN ;2;360;;;"""L"" i posisjon 2 er lette kjt., ""T"" i posisjon 2 er tunge kjt. Se egen fane"
-hybrid           ;Hybrid/Ikke hybrid;AN ;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
-hybrid-kategori  ;Type hybrid;AN ;1;363;;;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
+euronorm-ny;Euronorm;AN;2;360;;;"""L"" i posisjon 2 er lette kjt., ""T"" i posisjon 2 er tunge kjt. Se egen fane"
+hybrid;Hybrid/Ikke hybrid;AN;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
+hybrid-kategori;Type hybrid;AN;1;363;;;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
 drivstoff-forbruk;Drivstoff-forbruk;DEC1;3;364;;;Siste siffer er desimal, Angis i l/100km og gjelder komibinert forbruk (ikke nødvendigvis oppgitt)
-partikkelutslipp ;Partikkelutslipp;DEC4;5;367;;;4 siste siffer er desimaler, g/km for Lett euronorm, g/kwt for Tung euronorm
-nox-utslipp      ;NOX-utslipp;DEC4;5;372;;;4 siste siffer er desimaler, g/km                       
+partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;4 siste siffer er desimaler, g/km for Lett euronorm, g/kwt for Tung euronorm
+nox-utslipp;NOX-utslipp;DEC4;5;372;;;4 siste siffer er desimaler, g/km                       
 vrakpant-utbetalt;Dato for utbet vrakpant;NUM;8;377;;;Kun utfyllt dersom kjøretøye er vraket
