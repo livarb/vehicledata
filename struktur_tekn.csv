@@ -1,29 +1,29 @@
 kortnamn;felt;type;lengde;startpos;searchable;groupable;kommentar
 kjennemerke;Kjennemerke;AN;7;1;true;true;Kjøretøyets registreringsnummer
-understellsnr;Understellsnummer;AN;19;8;true;true;Vehicle Identification Number (VIN) Unikt for hvert enkelt kjøretøy
+understellsnr;Understellsnummer;AN;19;8;true;true;Vehicle Identification Number (VIN). Unikt for hvert enkelt kjøretøy
 reg_aar;Reg. år (mod-år);NUM;4;27;;true;
 reg_forsteg_norge;Reg. førsteg. Norge;NUM;8;31;;true;Dato for førstgangsregistrering i Norge
-merkekode;Merkekode;NUM;4;39;;;Se egen fane, hver merkekode er knyttet opp mot merkenavn  f.eks 1400=BMW
-modellbetegnelse;Modellbetegnelse;AN;20;43;;;Produsentens eget navn på modellen f.eks: 520D XDRIVE
-typebetegnelse;Typebetegnelse;AN;20;63;;true;Produsentens eget navn på type f.eks 5k
-kjoretoygruppe;Kjøretøygruppe;NUM;3;83;;true;Se egen fane over kjøretøygruppe kode+navn
-motorytelse;Motorytelse;DEC2;7;86;;;Oppgis i Kw når ytelsesmaal (s.d)=1, de 2 siste er desimaler. Er ytelsesmaal = 2 er tallet oppgitt i HK.
+merkekode;Merkekode;NUM;4;39;;;Se https://hotell.difi.no/?dataset=vegvesen/merkekode
+modellbetegnelse;Modellbetegnelse;AN;20;43;;;Produsentens eget navn på modellen, f.eks: 520D XDRIVE
+typebetegnelse;Typebetegnelse;AN;20;63;;true;Produsentens eget navn på type, f.eks 5k
+kjoretoygruppe;Kjøretøygruppe;NUM;3;83;;true;Se https://hotell.difi.no/?dataset=vegvesen/kjoretoygruppe
+motorytelse;Motorytelse;DEC2;7;86;;;Oppgis i Kw når ytelsesmaal = 1, oppgis i HK når ytelsesmaal = 2. Se egen kolonne for ytelesesmaal
 slagvolum;Slagvolum;NUM;6;93;;;Oppgis i ccm
-drivstoff;Drivstoff;NUM;2;99;;;Se egen fane
+drivstoff;Drivstoff;NUM;2;99;;;Se https://hotell.difi.no/?dataset=vegvesen/drivstoffkoder
 lengde;Lengde;NUM;4;101;;;Oppgis i cm
 bredde;Bredde;NUM;3;105;;;Oppgis i cm
-std_dekk_foran;Std. dekk foran;AN;15;108;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kallees profil og angisi % av dekkbredde, R15=felgens diameter i tommer
-std_dekk_bak;Std. dekk bak;AN;15;123;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kallees profil og angisi % av dekkbredde, R15=felgens diameter i tommer
-std_felg_foran;Std. felg forran;AN;8;138;;;f.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
-std_felg_bak;Std. felg bak;AN;8;146;;;f.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
-min_li_foran;Min. LI foran;AN;9;154;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for, se egen fane Belastningstabell
-min_li_bak;Min. LI bak;AN;9;163;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for, se egen fane Belastningstabell
-min_hast_foran;Min. hast. foran;AN;4;172;;;Hastighetskode(SI=Speed Index) for dekk, se egne fane Hastighetstabell
-min_hast_bak;Min. hast. bak;AN;4;176;;;Hastighetskode(SI=Speed Index) for dekk, se egne fane Hastighetstabell
-min_innpress_foran;Min. innpress foran;NUM;4;180;;;F.eks18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm  fra senter av felgen ut fra bilen
-min_innpress_bak;Min. innpress bak;NUM;4;184;;;F.eks18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm  fra senter av felgen ut fra bilen
-sporvidde_foran;Sporvidde foran;NUM;4;188;;;Oppgis i mm, Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
-sporvidde_bak;Sporvidde bak;NUM;4;192;;;Oppgis i mm, Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
+std_dekk_foran;Std. dekk foran;AN;15;108;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kalles profil og angis i % av dekkbredde, R15=felgens diameter i tommer
+std_dekk_bak;Std. dekk bak;AN;15;123;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kalles profil og angis i % av dekkbredde, R15=felgens diameter i tommer
+std_felg_foran;Std. felg forran;AN;8;138;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
+std_felg_bak;Std. felg bak;AN;8;146;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
+min_li_foran;Min. LI foran;AN;9;154;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
+min_li_bak;Min. LI bak;AN;9;163;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
+min_hast_foran;Min. hast. foran;AN;4;172;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
+min_hast_bak;Min. hast. bak;AN;4;176;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
+min_innpress_foran;Min. innpress foran;NUM;4;180;;;F.eks. 18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
+min_innpress_bak;Min. innpress bak;NUM;4;184;;;F.eks. 18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
+sporvidde_foran;Sporvidde foran;NUM;4;188;;;Oppgis i mm. Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
+sporvidde_bak;Sporvidde bak;NUM;4;192;;;Oppgis i mm. Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
 totalvekt;Totalvekt;NUM;6;196;;;Oppgis i kg
 egenvekt;Egenvekt;NUM;5;202;;;Oppgis i kg
 akseltrykk_foran;Akseltrykk foran;NUM;5;207;;;Oppgis i kg
@@ -32,7 +32,7 @@ eu_variant;EU-variant;AN;20;218;;;Ingen relevans, kommer fra typegodkjenning
 eu_versjon;Eu-versjon;AN;24;238;;;Ingen relevans, kommer fra typegodkjenning
 bruktimportert;Bruktimportert;NUM;1;262;;;1 - dersom bruktimportert
 avreg_dato;Avreg dato;NUM;8;263;;;Dato for avregistrering av kjøretøyet
-farge;Farge;AN;20;271;;;Se egen fane
+farge;Farge;AN;20;271;;;Se https://hotell.difi.no/?dataset=vegvesen/fargekode
 antall_aksler;Antall aksler;NUM;2;291;;;
 antall_aksler_drift;Antall aksler med drift;NUM;1;293;;;
 tilhengervek_m_brems;Tilhengervekt m/brems;NUM;5;294;;;Oppgis i kg
@@ -44,16 +44,16 @@ vogntogvekt;Vogntogvekt;NUM;6;317;;;Oppgis i kg
 ytelsesmaal;Ytelsesmål;NUM;1;323;;;1 = KW, 2 = HK, ellers ukjent/mangler
 sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;324;;;Dato for siste godkjente periodiske kjøretøykontroll
 neste_pkk;Neste PKK;NUM;8;332;;;Dato for neste periodiske kjøretøykontroll
-siste_reg_dato;Siste reg.dato;NUM;8;340;;;nytt vognkort hvis > 20040601
+siste_reg_dato;Siste reg.dato;NUM;8;340;;;Vognkortet er av ny type hvis > 20040601
 reg1g;Reg. 1g. mnd-dag;NUM;4;348;;;MMDD for førstgangsregistrering i Norge
-co2_utslippp;Co2-utslipp;NUM;4;352;;;oppgis i gram pr.kilometer
+co2_utslippp;Co2-utslipp;NUM;4;352;;;Oppgis i gram pr. kilometer
 euronorm;Euronorm;AN;1;356;;;
 sitteplasser;Sitteplasser totalt;NUM;2;357;;;
-fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;359;;;1=nei, 2=ja,0=uoppgitt
-euronorm_ny;Euronorm;AN;2;360;;;"""L"" i posisjon 2 er lette kjt., ""T"" i posisjon 2 er tunge kjt. Se egen fane"
-hybrid;Hybrid/Ikke hybrid;AN;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
+fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;359;;;1=nei, 2=ja, 0=uoppgitt
+euronorm_ny;Euronorm;AN;2;360;;;L i posisjon 2 er lette kjøretøy, T i posisjon 2 er tunge kjøretøy. Se https://hotell.difi.no/?dataset=vegvesen/euronorm
+hybrid;Hybrid/Ikke hybrid;AN;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=Ikke oppgitt
 hybrid_kategori;Type hybrid;AN;1;363;;;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
-drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;364;;;Siste siffer er desimal, Angis i l/100km og gjelder komibinert forbruk (ikke nødvendigvis oppgitt)
-partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;4 siste siffer er desimaler, g/km for Lett euronorm, g/kwt for Tung euronorm
-nox_utslipp;NOX-utslipp;DEC4;5;372;;;4 siste siffer er desimaler, g/km                       
-vrakpant_utbetalt;Dato for utbet vrakpant;NUM;8;377;;;Kun utfyllt dersom kjøretøye er vraket
+drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;364;;;Angis i liter/100km og gjelder kombinert forbruk (ikke nødvendigvis oppgitt)
+partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;Oppgis i g/km for Lett euronorm, g/kwt for Tung euronorm
+nox_utslipp;NOX-utslipp;DEC4;5;372;;;Oppgis i g/km
+vrakpant_utbetalt;Dato for utbet vrakpant;NUM;8;377;;;Kun utfyllt dersom kjøretøyet er vraket

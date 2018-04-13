@@ -1,57 +1,57 @@
 kortnamn;felt;type;lengde;startpos;searchable;groupable;kommentar
-typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;1;true;true;"Består av: godkj.nr (1-4), variant (6-7) og år (8-11)"
-eu_hovednummer;Eu-hovednummer;AN;40;12;;;
-merkekode;Merkekode;NUM;4;52;;;
-modellbetegnelse;Modellbetegnelse;AN;20;56;;;
-typebetegnelse;Typebetegnelse;AN;20;76;;true;
-kjoretoygruppe;Kjøretøygruppe;NUM;3;96;;true;
-ramme_karosseri;Ramme-karosseri;AN;70;99;;;
-motorytelse;Motorytelse;DEC2;7;169;;;
-slagvolum;Slagvolum;NUM;6;176;;;
-drivstoff;Drivstoff;NUM;2;182;;;
-lengde;Lengde;NUM;4;184;;;
-bredde;Bredde;NUM;3;188;;;
-std_dekk_foran;"Std. dekk foran";AN;15;191;;;
-std_dekk_bak;"Std. dekk bak";AN;15;206;;;
-std_felg_foran;"Std. felg foran";AN;8;221;;;
-std_felg_bak;"Std. felg bak";AN;8;229;;;
-min_li_foran;"Min LI foran";AN;9;237;;;
-min_li_bak;"Min LI bak";AN;9;246;;;
-min_hast_foran;"Min hast foran";AN;4;255;;;
-min_hast_bak;"Min hast bak";AN;4;259;;;
-min_innpress_foran;"Min innpress foran";NUM;4;263;;;
-min_innpress_bak;"Min innpress bak";NUM;4;267;;;
-maks_sporv_foran;"Maks sporv foran";AN;4;271;;;
-maks_sporv_bak;"Maks sporv bak";AN;4;275;;;
-motormerking;Motormerking;AN;30;279;;;
-girkasse;Girkasse;AN;20;309;;;
-stand_dba;"Stand dB(A)";NUM;3;329;;;
-omdreininger;Omdreininger;NUM;4;332;;;
-totalvekt;Totalvekt;NUM;6;336;;;
-egenvekt;Egenvekt;NUM;5;342;;;
-till_foraksellast;"Till. foraksellast";NUM;5;347;;;
-till_bakaksellast;"Till. bakaksellast";NUM;6;352;;;
-variant;Variant;AN;20;358;;;
-versjon;Versjon;AN;24;378;;;
-gyldig_fra_unr;"Gyldig fra unr";AN;19;402;;;
-drivende_hjul;"Drivende hjul";AN;15;421;;;
-vognkort_anm;"Vognkort anm.";AN;60;436;;;
-identitet_anm;"Identitet anm.";AN;60;496;;;
-antall_aksler;"Antall aksler";NUM;2;556;;;
-antall_aksler_drift;"Antall aksler med drift";NUM;1;558;;;
-tilhengervekt_m_brems;"Tilhengervekt m/brems";NUM;5;559;;;
-tilhengervekt_u_brem;"Tilhengervekt u/brems";NUM;5;564;;;
-lengde_til_tilhkobling;"Lengde til tilh.kobling";NUM;4;569;;;
-max_belastning_h_feste;"Max. belastning h.feste";NUM;5;573;;;
-max_taklast;"Max. taklast";NUM;4;578;;;
-vogntogvekt;Vogntogvekt;NUM;6;582;;;
-ytelsesmaal;"Ytelsesmål";NUM;1;588;;;"ukjent eller ikke ytelse, 1 = KW, 2 = HK"
-co2_utslipp;"Co2-utslipp";NUM;4;589;;;
-sitteplasser;"Sitteplasser totalt";NUM;2;593;;;
-fab_mont_partikkelfilter;"Fab.mont. partikkelfilter";NUM;1;595;;;"1=nei, 2=ja,0=uoppgitt"
-euronorm;Euronorm;AN;2;596;;;L i posisjon 2 er lette kjt., T i posisjon 2 er tunge kjt.
+typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;1;true;true;Består av: godkj.nr (1-4), variant (5-7) og år (8-11)
+eu_hovednummer;Eu-hovednummer;AN;40;12;;;Eks: e4*98/14*0040*00
+merkekode;Merkekode;NUM;4;52;;;Se https://hotell.difi.no/?dataset=vegvesen/merkekode
+modellbetegnelse;Modellbetegnelse;AN;20;56;;;Produsentens eget navn på modellen f.eks: 520D XDRIVE
+typebetegnelse;Typebetegnelse;AN;20;76;;true;Produsentens eget navn på type f.eks 5k
+kjoretoygruppe;Kjøretøygruppe;NUM;3;96;;true;Se https://hotell.difi.no/?dataset=vegvesen/kjoretoygruppe
+ramme_karosseri;Ramme-karosseri;AN;70;99;;;Fritekst 
+motorytelse;Motorytelse;DEC2;7;169;;;Oppgis i Kw når ytelsesmaal = 1, oppgis i HK når ytelsesmaal = 2. Se egen kolonne for ytelesesmaal
+slagvolum;Slagvolum;NUM;6;176;;;Oppgis i ccm
+drivstoff;Drivstoff;NUM;2;182;;;Se https://hotell.difi.no/?dataset=vegvesen/drivstoffkoder
+lengde;Lengde;NUM;4;184;;;Oppgis i cm
+bredde;Bredde;NUM;3;188;;;Oppgis i cm
+std_dekk_foran;Std. dekk foran;AN;15;191;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kallees profil og angis i % av dekkbredde, R15=felgens diameter i tommer
+std_dekk_bak;Std. dekk bak;AN;15;206;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kallees profil og angis i % av dekkbredde, R15=felgens diameter i tommer
+std_felg_foran;Std. felg foran;AN;8;221;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
+std_felg_bak;Std. felg bak;AN;8;229;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
+min_li_foran;Min LI foran;AN;9;237;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
+min_li_bak;Min LI bak;AN;9;246;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
+min_hast_foran;Min hast foran;AN;4;255;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
+min_hast_bak;Min hast bak;AN;4;259;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
+min_innpress_foran;Min innpress foran;NUM;4;263;;;F.eks18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
+min_innpress_bak;Min innpress bak;NUM;4;267;;;F.eks18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
+maks_sporv_foran;Maks sporv foran;AN;4;271;;;Oppgis i mm. Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
+maks_sporv_bak;Maks sporv bak;AN;4;275;;;Oppgis i mm. Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
+motormerking;Motormerking;AN;30;279;;;Produsentens tekniske/spesifikke data om motoren, som regel i form av klistremerke på selve motoren
+girkasse;Girkasse;AN;20;309;;;Automat/Manuell/Blank
+stand_dba;Stand dB(A);NUM;3;329;;;Standardstøy
+omdreininger;Omdreininger;NUM;4;332;;;Ved omdreinigstall (standardstøy)
+totalvekt;Totalvekt;NUM;6;336;;;Oppgis i kg
+egenvekt;Egenvekt;NUM;5;342;;;Oppgis i kg
+till_foraksellast;Till. foraksellast;NUM;5;347;;;Oppgis i kg
+till_bakaksellast;Till. bakaksellast;NUM;6;352;;;Oppgis i kg
+variant;Variant;AN;20;358;;;Ingen relevans, kommer fra typegodkjenning
+versjon;Versjon;AN;24;378;;;Ingen relevans, kommer fra typegodkjenning
+gyldig_fra_unr;Gyldig fra unr;AN;19;402;;;Ingen relevans, kommer fra typegodkjenning
+drivende_hjul;Drivende hjul;AN;15;421;;;Foran/Bak/Alle/Blank
+vognkort_anm;Vognkort anm.;AN;60;436;;;Tekst i vognkort
+identitet_anm;Identitet anm.;AN;60;496;;;Tekst i vognkort
+antall_aksler;Antall aksler;NUM;2;556;;;
+antall_aksler_drift;Antall aksler med drift;NUM;1;558;;;
+tilhengervekt_m_brems;Tilhengervekt m/brems;NUM;5;559;;;Oppgis i kg
+tilhengervekt_u_brem;Tilhengervekt u/brems;NUM;5;564;;;Oppgis i kg
+lengde_til_tilhkobling;Lengde til tilh.kobling;NUM;4;569;;;Oppgis i cm
+max_belastning_h_feste;Max. belastning h.feste;NUM;5;573;;;Oppgis i kg
+max_taklast;Max. taklast;NUM;4;578;;;Oppgis i kg
+vogntogvekt;Vogntogvekt;NUM;6;582;;;Oppgis i kg
+ytelsesmaal;Ytelsesmål;NUM;1;588;;;1 = KW, 2 = HK, ellers ukjent/mangler
+co2_utslipp;Co2-utslipp;NUM;4;589;;;Oppgis i gram pr.kilometer
+sitteplasser;Sitteplasser totalt;NUM;2;593;;;
+fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;595;;;1=nei, 2=ja,0=uoppgitt
+euronorm;Euronorm;AN;2;596;;;L i posisjon 2 er lette kjøretøy, T i posisjon 2 er tunge kjøretøy. Se https://hotell.difi.no/?dataset=vegvesen/euronorm
 hybrid;Hybrid/Ikke hybrid;AN;1;598;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
-hybrid_kategori;Type hybrid;AN;1;599;;;1=PLGIN, 2=NOPLG, X=N.A (not applicable)., Z=Annet
-drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;600;;;L/100km
-partikkelutslipp;Partikkelutslipp;DEC4;5;603;;;g/km for Lett euronorm, g/kwt for Tung euronorm
+hybrid_kategori;Type hybrid;AN;1;599;;;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
+drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;600;;;Liter/100km
+partikkelutslipp;Partikkelutslipp;DEC4;5;603;;;Oppgis i g/km for Lett euronorm, g/kwt for Tung euronorm
 nox_utslipp;NOX-utslipp;DEC4;5;608;;;
