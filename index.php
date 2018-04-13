@@ -1,65 +1,7 @@
 <?php
 // header('Content-Type: text/html; charset=utf-8');
 
-define("TESTMODE", true);
-
-if (TESTMODE) {
-	define("WRITECSV", false);
-	define("WRITEMETA", false);
-	define("DEBUG", true);
-	define("DEBUG_LINELENGTH", false);	
-	define("OUTPUT", true);
-	define("OUTPUT_STRUKTUR", true);	
-	define("OUTPUTDIR", "outputTest/");
-
-	$input = array(
-		array(
-			"tekn", // katalognavn
-			"struktur_tekn.csv", // struktur-fil
-			"tekntest.txt", // data-fil
-			"Kjøretøy - enkeltgodkjente" // datasett-tittel (meta.xml)
-		), array(
-			"typg",
-			"struktur_typg.csv",
-			"typgtest.txt",
-			"Typegodkjenninger for kjøretøy"
-		), array(
-			"utek",
-			"struktur_utek.csv",
-			"utektest.txt",
-			"Kjøretøy - typegodkjente"
-		)
-	);
-
-} else {
-	define("WRITECSV", true);
-	define("WRITEMETA", true);
-	define("DEBUG", true);
-	define("DEBUG_LINELENGTH", false);
-	define("OUTPUT", false);
-	define("OUTPUT_STRUKTUR", false);
-	define("OUTPUTDIR", "output/");
-
-	$input = array(
-		array(
-			"tekn",
-			"struktur_tekn.csv",
-			"completeRaw/tekninfo",
-			"Kjøretøy - enkeltgodkjente"
-		)
-		, array(
-			"typg",
-			"struktur_typg.csv",
-			"completeRaw/typginfo",
-			"Typegodkjenninger for kjøretøy"
-		), array(
-			"utek",
-			"struktur_utek.csv",
-			"completeRaw/utekinfo",
-			"Kjøretøy - typegodkjente"
-		)
-	);
-}
+require("settings.php");
 
 // http://php.net/manual/en/function.microtime.php
 function microtime_float() {
@@ -89,7 +31,7 @@ function parseCSV($data) {
 }
 
 function str_getcsv_custom($array) {
-	return str_getcsv($array, ";");
+	return str_getcsv($array, ";", '"', "\\");
 }
 
 function createFieldsText($fields) {
@@ -139,6 +81,56 @@ function getFilePointer($filename) {
 	return $fp;
 }
 
+function printStructError($msg, $value, $structFile, $lineNum) {
+	print("$structFile line $lineNum: $msg — «" . $value . "»<br/>\n");
+}
+
+function validateStructData($data) {
+	// Check structure-file
+	for ($i = 0; $i < count($data); $i++) {
+		$row = $data[$i];
+
+		if (!preg_match('/^[a-z0-9_]*$/', $row["kortnamn"])) { 
+			printStructError("invalid «kortnamn».", $row["kortnamn"], $structFile, $i);
+		}
+
+		// «felt» is not evaluated
+
+		if (!ctype_digit($row["lengde"])) {
+			printStructError("«lengde» is not number", $row["lengde"], $structFile, $i);
+		}
+
+		if (!ctype_digit($row["startpos"])) {
+			printStructError("«startpos» is not number", $row["startpos"], $structFile, $i);
+		}
+
+		if (startsWith($row["type"], "DEC")) {
+			$lastPart = substr($row["type"], 3);
+			if (!ctype_digit($lastPart)) {
+				printStructError("Type is DEC but has invalid or missing number.", $row["type"], $structFile, $i);
+			}
+		} else if ($row["type"] !== "NUM" && $row["type"] !== "AN") {
+			printStructError("invalid type", $row["type"], $structFile, $i);
+		}
+
+		if ($row["searchable"] !== "true" 
+			&& $row["searchable"] !== "false"
+			&& $row["searchable"] !== "") {
+			printStructError("«searchable» invalid.", $row["searchable"], $structFile, $i);			
+		}
+
+		if ($row["groupable"] !== "true" 
+			&& $row["groupable"] !== "false"
+			&& $row["groupable"] !== "") {
+			printStructError("«groupable» invalid.", $row["searchable"], $structFile, $i);			
+		}
+
+		// «kommentar» is not evaluated
+
+		// TODO: check that there are no gaps in character-positions covered in a line
+	}
+}
+
 ?>
 
 <style>
@@ -162,6 +154,8 @@ foreach ($input as $files) {
 
 	$dataRaw = file($structFile);
 	$data = parseCSV($dataRaw);
+
+	validateStructData($data, $structFile);
 
 	$cardata = array();
 	$cardataRawFP = fopen($dataFile, "r");
@@ -211,13 +205,15 @@ foreach ($input as $files) {
 	$lineNum = 1;
     while (($line = fgets($cardataRawFP)) !== false) {
 
-    	// renew PHP-script timeout to keep going
-    	set_time_limit(2);
-
     	if (!(DEBUG || WRITECSV || DEBUG_LINELENGTH)) {
     		$lineNum++;
     		continue;
     	}
+
+		if ($lineNum % 100000 == 0) {
+			// renew PHP-script timeout to keep going
+	    	set_time_limit(30);
+		}
 
 		$lineLen = strlen($line);
 
@@ -314,9 +310,9 @@ foreach ($input as $files) {
 		if (DEBUG_LINELENGTH) {		
 			$arrCheckImploded = implode($arrCheck);
 			$zeroes = substr_count($arrCheckImploded, "0");
-			$ones = substr_count($arrCheckImploded, "1");
 
 			if ($zeroes > 0) {
+				$ones = substr_count($arrCheckImploded, "1");
 				print($lineNum . ": Dekningssjekk. Linjelengede: $lineLen , 0: $zeroes, 1: $ones\n" . $arrCheckImploded . "\n");
 				print($line . "<br/>\n");
 			}
