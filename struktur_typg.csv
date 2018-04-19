@@ -49,7 +49,7 @@ ytelsesmaal;Ytelsesmål;NUM;1;588;;;1 = KW, 2 = HK, ellers ukjent/mangler
 co2_utslipp;Co2-utslipp;NUM;4;589;;;Oppgis i gram pr.kilometer
 sitteplasser;Sitteplasser totalt;NUM;2;593;;;
 fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;595;;;1=nei, 2=ja,0=uoppgitt
-euronorm;Euronorm;AN;2;596;;;L i posisjon 2 er lette kjøretøy, T i posisjon 2 er tunge kjøretøy. Se https://hotell.difi.no/?dataset=vegvesen/euronorm
+euronorm_ny;Euronorm;AN;2;596;;;L i posisjon 2 er lette kjøretøy, T i posisjon 2 er tunge kjøretøy. Se https://hotell.difi.no/?dataset=vegvesen/euronorm
 hybrid;Hybrid/Ikke hybrid;AN;1;598;;;0=Ikke hybrid, 1=Hybrid, 9=ikke oppgitt
 hybrid_kategori;Type hybrid;AN;1;599;;;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
 drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;600;;;Liter/100km
