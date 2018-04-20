@@ -131,6 +131,55 @@ function validateStructData($data) {
 	}
 }
 
+function crossCheckStruct($structData, $structFile) {
+	global $structDefs;
+
+	foreach ($structData as $struct) {
+		$kortnamn = $struct["kortnamn"];
+		$struct["fil"] = $structFile;
+
+		if (array_key_exists($kortnamn, $structDefs)) {
+			checkIfStructsAreEqual($struct, $structDefs[$kortnamn]);
+		} else {
+			$structDefs[$kortnamn] = $struct;
+		}
+	}
+}
+
+function checkIfStructsAreEqual($struct1, $struct2) {
+	if ($struct1["felt"] !== $struct2["felt"]) {
+		printStructDiff("felt", "Feltnamn (langt)", $struct1, $struct2);
+	}
+	if ($struct1["type"] !== $struct2["type"]) {
+		printStructDiff("type", "Type", $struct1, $struct2);
+	}
+	if ($struct1["searchable"] !== $struct2["searchable"]) {
+		printStructDiff("searchable", "Søkbar", $struct1, $struct2);
+	}
+	if ($struct1["groupable"] !== $struct2["groupable"]) {
+		printStructDiff("groupable", "Grupperbar/filtrerbar", $struct1, $struct2);
+	}
+	if ($struct1["kommentar"] !== $struct2["kommentar"]) {
+		printStructDiff("kommentar", "Kommentar/beskriving", $struct1, $struct2);
+	}	
+}
+
+function printStructDiff($shortName, $field, $struct1, $struct2) {
+	print (
+		$struct1["kortnamn"] . " - " . $field . " er ulikt:<br>\n"
+		. "«" . $struct1[$shortName] . "» (" . $struct1["fil"] . ")<br>\n"
+		. "«" . $struct2[$shortName] . "» (" . $struct2["fil"] . ")<br>\n"
+		. "<br/>\n"
+);
+
+}
+
+function stringNeedEscaping($string) {
+	if (strpos($string, ';') !== false) return true;
+	if (strpos($string, '"') !== false) return true;
+	return false;
+}
+
 ?>
 
 <style>
@@ -148,6 +197,26 @@ foreach ($input as $files) {
 }
 print ("<br/><br/>\n");
 
+if (CHECK_CODELISTS) {
+	$codelistData = array();
+	foreach($codelistKeyColumns as $codelistLocation => $codelistColumn) {
+		$cData = array();
+
+		$codelistCsvUrl = "https://hotell.difi.no/download/" . $codelistLocation; // . "?download"
+		$dataRaw = file($codelistCsvUrl);
+		$data = parseCSV($dataRaw);
+
+		foreach ($data as $row) {
+			$cData[] = $row[$codelistColumn];
+		}
+		$codelistData[$codelistLocation] = $cData;
+
+		$codelistErrors = array();
+	}
+}
+
+$structDefs = array();
+
 foreach ($input as $files) {
 	$structFile = $files[1];
 	$dataFile = $files[2];
@@ -156,6 +225,9 @@ foreach ($input as $files) {
 	$data = parseCSV($dataRaw);
 
 	validateStructData($data, $structFile);
+	if (DEBUG) {
+		crossCheckStruct($data, $files[0]);
+	}
 
 	$cardata = array();
 	$cardataRawFP = fopen($dataFile, "r");
@@ -218,7 +290,6 @@ foreach ($input as $files) {
 		$lineLen = strlen($line);
 
 		if (DEBUG_LINELENGTH) {
-			// minus 1 linelength
 			$arrCheck = array_fill(0, ($lineLen-1), '0');
 		}
 
@@ -226,12 +297,13 @@ foreach ($input as $files) {
 
 		$car = array();
 		foreach ($data as $attribute) {
-			// hentar ut rå verdi
+			// hentar ut råverdi
 			$value = substr(
 				$line, 
 				($attribute["startpos"]-1), 
 				$attribute["lengde"]
 			);
+			$valueRaw = $value;
 
 			if ($value === FALSE) {
 				$lineErrors = true;
@@ -253,6 +325,8 @@ foreach ($input as $files) {
 				|| startsWith($attribute["type"], "DEC")
 			)) {
 				if (!is_numeric($value)) {
+					// TODO: use ctype_digit
+					// ctype_digit(string $text)
 					// print("$lineNum: " 
 					// 	. $attribute["kortnamn"] 
 					// 	. " er ikkje numerisk! $value\n"
@@ -264,7 +338,27 @@ foreach ($input as $files) {
 
 			// Konverterer data
 			if ($attribute["type"] == "NUM") {
-				$value = intval($value, 10);
+				if (DEBUG) $value_intval = intval($value, 10);
+				$value_ltrim = ltrim($value, "0");
+				if (strlen($value_ltrim) === 0) {
+					$value_ltrim = "0";	
+				}		
+
+				if (DEBUG) {
+					if (strval($value_intval) !== $value_ltrim
+					&& $attribute["kortnamn"] !== "typegodkjenningsnr") {
+						print ("$lineNum: " 
+							. $attribute["kortnamn"] . " - "
+							. "«" . $value_intval . "»" . " - "
+							. "«" . $value_ltrim . "»" . " - "
+							. "«" . $valueRaw . "»"
+							. "<br/>\n"
+						);
+					}
+				}
+
+				$value = $value_ltrim;
+				
 			} else if (startsWith($attribute["type"], "DEC")) {
 				$numDecimals = intval(
 					substr($attribute["type"], 3)
@@ -280,20 +374,54 @@ foreach ($input as $files) {
 			} else {
 				$value_trimmed = trim($value);
 				if (strlen($value_trimmed) > 0) {
-					$value_trimmed = str_replace('"', '\"', $value_trimmed);
-					$value = '"' 
-						// utf8_encode for æøå
-						. utf8_encode($value_trimmed)
-						. '"';
+					// utf8_encode for æøå
+					$value_trimmed = utf8_encode($value_trimmed);
+					if (stringNeedEscaping($value_trimmed)) {
+						$value_trimmed = str_replace('"', '\"', $value_trimmed);
+						$value = '"' 
+							. $value_trimmed
+							. '"';
+
+						if (DEBUG) {
+							// print ("$lineNum: " 
+							// 	. "«" . $attribute["kortnamn"] . "» needs escaping - "
+							// 	. "«" . $value . "»" . " - "
+							// 	. "«" . $value_trimmed . "»" . " - "
+							// 	. "«" . $valueRaw . "»"
+							// 	. "<br/>\n"
+							// );					
+						}							
+
+					} else {
+						$value = $value_trimmed;
+					}
 				} else {
 					$value = "";
 				}
 			}
-			$car[$attribute["kortnamn"]] = $value;
 
+			if (CHECK_CODELISTS && array_key_exists($attribute["kortnamn"], $columnToCodelists)) {
+				// if (DEBUG) print("Checking codelist on column «" . $attribute["kortnamn"] . "»\n");
+				$codelistLocation = $columnToCodelists[$attribute["kortnamn"]];
+				if ($value === ""
+					|| in_array($value, $codelistData[$codelistLocation])
+					|| in_array(trim($value, '"'), $codelistData[$codelistLocation]) ) {
+					// if (DEBUG) print("OK. Value $value in column «" . $attribute["kortnamn"] . "» found in codelist.\n");
+				} else {
+						$errorMsg = $files[0] . " Column: «" . $attribute["kortnamn"] 
+							. "» has invalid value. Value: «" . $value . "», Value-trimmed: «" . trim($value, '"') . "», Value raw: «" . $valueRaw . "»";
+						
+						if (array_key_exists($errorMsg, $codelistErrors)) {
+							$codelistErrors[$errorMsg]++;
+						} else {
+							$codelistErrors[$errorMsg] = 1;
+						}
+				}
+			}
+
+			$car[$attribute["kortnamn"]] = $value;
 		}
 		if (DEBUG && $lineErrors) {
-			// print("XX: " . $line . "\n");
 			print($lineNum . "\n");
 			flush();
 			ob_flush();
@@ -342,6 +470,14 @@ foreach ($input as $files) {
 	flush();
 	ob_flush();
 } 
+
+if (CHECK_CODELISTS) {
+	arsort($codelistErrors);
+	print("<b>Codelist-errors:</b><br/>\n");
+	print("<pre>");
+	print_r($codelistErrors);
+	print("</pre>\n");
+}
 
 $time_end = microtime(true);
 $time = number_format($time_end - $time_start, 2);

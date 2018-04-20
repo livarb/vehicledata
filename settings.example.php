@@ -6,6 +6,7 @@ if (TESTMODE) {
 	define("WRITEMETA", false);
 	define("DEBUG", true);
 	define("DEBUG_LINELENGTH", false);
+	define("CHECK_CODELISTS", false);	
 	define("OUTPUT", true);
 	define("OUTPUT_STRUKTUR", true);	
 	define("OUTPUTDIR", "outputTest/");
@@ -34,6 +35,7 @@ if (TESTMODE) {
 	define("WRITEMETA", true);
 	define("DEBUG", true);
 	define("DEBUG_LINELENGTH", false); // NB! doblar køyretid
+	define("CHECK_CODELISTS", true);	
 	define("OUTPUT", false);
 	define("OUTPUT_STRUKTUR", false);
 	define("OUTPUTDIR", "output/");
