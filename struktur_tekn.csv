@@ -3,13 +3,13 @@ kjennemerke;Kjennemerke;AN;7;1;true;true;Kjøretøyets registreringsnummer
 understellsnr;Understellsnummer;AN;19;8;true;true;Vehicle Identification Number (VIN). Unikt for hvert enkelt kjøretøy
 reg_aar;Reg. år (mod-år);NUM;4;27;;true;
 reg_forsteg_norge;Reg. førsteg. Norge;NUM;8;31;;true;Dato for førstgangsregistrering i Norge
-merkekode;Merkekode;NUM;4;39;;;Se https://hotell.difi.no/?dataset=vegvesen/merkekode
-modellbetegnelse;Modellbetegnelse;AN;20;43;;;Produsentens eget navn på modellen, f.eks: 520D XDRIVE
-typebetegnelse;Typebetegnelse;AN;20;63;;true;Produsentens eget navn på type, f.eks 5k
-kjoretoygruppe;Kjøretøygruppe;NUM;3;83;;true;Se https://hotell.difi.no/?dataset=vegvesen/kjoretoygruppe
+merkekode;Merkekode;NUM;4;39;false;true;Se https://hotell.difi.no/?dataset=vegvesen/merkekode
+modellbetegnelse;Modellbetegnelse;AN;20;43;;;Produsentens eget navn på modellen. F.eks. 520D XDRIVE
+typebetegnelse;Typebetegnelse;AN;20;63;;;Produsentens eget navn på type. F.eks. 5k
+kjoretoygruppe;Kjøretøygruppe;NUM;3;83;false;true;Se https://hotell.difi.no/?dataset=vegvesen/kjoretoygruppe
 motorytelse;Motorytelse;DEC2;7;86;;;Oppgis i Kw når ytelsesmaal = 1, oppgis i HK når ytelsesmaal = 2. Se egen kolonne for ytelesesmaal
 slagvolum;Slagvolum;NUM;6;93;;;Oppgis i ccm
-drivstoff;Drivstoff;NUM;2;99;;;Se https://hotell.difi.no/?dataset=vegvesen/drivstoffkoder
+drivstoff;Drivstoff;NUM;2;99;;true;Se https://hotell.difi.no/?dataset=vegvesen/drivstoffkoder
 lengde;Lengde;NUM;4;101;;;Oppgis i cm
 bredde;Bredde;NUM;3;105;;;Oppgis i cm
 std_dekk_foran;Std. dekk foran;AN;15;108;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kalles profil og angis i % av dekkbredde, R15=felgens diameter i tommer
@@ -30,30 +30,30 @@ akseltrykk_foran;Akseltrykk foran;NUM;5;207;;;Oppgis i kg
 akseltrykk_bak;Akseltrykk bak;NUM;6;212;;;Oppgis i kg
 eu_variant;EU-variant;AN;20;218;;;Ingen relevans, kommer fra typegodkjenning
 eu_versjon;Eu-versjon;AN;24;238;;;Ingen relevans, kommer fra typegodkjenning
-bruktimportert;Bruktimportert;NUM;1;262;;;1 - dersom bruktimportert
-avreg_dato;Avreg dato;NUM;8;263;;;Dato for avregistrering av kjøretøyet
+bruktimportert;Bruktimportert;NUM;1;262;;true;1 - dersom bruktimportert
+avreg_dato;Avreg dato;NUM;8;263;;true;Dato for avregistrering av kjøretøyet
 farge;Farge;AN;20;271;;;Se https://hotell.difi.no/?dataset=vegvesen/fargekode
-antall_aksler;Antall aksler;NUM;2;291;;;
-antall_aksler_drift;Antall aksler med drift;NUM;1;293;;;
-tilhengervek_m_brems;Tilhengervekt m/brems;NUM;5;294;;;Oppgis i kg
+antall_aksler;Antall aksler;NUM;2;291;;true;
+antall_aksler_drift;Antall aksler med drift;NUM;1;293;;true;
+tilhengervek_m_brems;Tilhengervekt m/brems;NUM;5;294;;true;Oppgis i kg
 tilhengervekt_u_brems;Tilhengervekt u/brems;NUM;5;299;;;Oppgis i kg
 lengde_til_tilhkobling;Lengde til tilh.kobling;NUM;4;304;;;Oppgis i cm
 max_belastning_h_fest;Max. belastning h.feste;NUM;5;308;;;Oppgis i kg
 max_taklast;Max. taklast;NUM;4;313;;;Oppgis i kg
 vogntogvekt;Vogntogvekt;NUM;6;317;;;Oppgis i kg
-ytelsesmaal;Ytelsesmål;NUM;1;323;;;1 = KW, 2 = HK, ellers ukjent/mangler
-sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;324;;;Dato for siste godkjente periodiske kjøretøykontroll
-neste_pkk;Neste PKK;NUM;8;332;;;Dato for neste periodiske kjøretøykontroll
-siste_reg_dato;Siste reg.dato;NUM;8;340;;;Vognkortet er av ny type hvis > 20040601
-reg1g;Reg. 1g. mnd-dag;NUM;4;348;;;MMDD for førstgangsregistrering i Norge
+ytelsesmaal;Ytelsesmål;NUM;1;323;;true;1 = KW, 2 = HK, ellers ukjent/mangler
+sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;324;;true;Dato for siste godkjente periodiske kjøretøykontroll
+neste_pkk;Neste PKK;NUM;8;332;;true;Dato for neste periodiske kjøretøykontroll
+siste_reg_dato;Siste reg.dato;NUM;8;340;;true;Vognkortet er av ny type hvis > 20040601
+reg1g;Reg. 1g. mnd-dag;AN;4;348;;;MMDD for førstgangsregistrering i Norge
 co2_utslippp;Co2-utslipp;NUM;4;352;;;Oppgis i gram pr. kilometer
 euronorm;Euronorm;AN;1;356;;;
-sitteplasser;Sitteplasser totalt;NUM;2;357;;;
-fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;359;;;1=nei, 2=ja, 0=uoppgitt
-euronorm_ny;Euronorm;AN;2;360;;;L i posisjon 2 er lette kjøretøy, T i posisjon 2 er tunge kjøretøy. Se https://hotell.difi.no/?dataset=vegvesen/euronorm
-hybrid;Hybrid/Ikke hybrid;AN;1;362;;;0=Ikke hybrid, 1=Hybrid, 9=Ikke oppgitt
-hybrid_kategori;Type hybrid;AN;1;363;;;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
+sitteplasser;Sitteplasser totalt;NUM;2;357;;true;
+fab_mont_partikkelfilter;Fab.mont. partikkelfilter;NUM;1;359;;true;1=nei, 2=ja, 0=uoppgitt
+euronorm_ny;Euronorm;AN;2;360;;true;L i posisjon 2 er lette kjøretøy, T i posisjon 2 er tunge kjøretøy. Se https://hotell.difi.no/?dataset=vegvesen/euronorm
+hybrid;Hybrid/Ikke hybrid;AN;1;362;;true;0=Ikke hybrid, 1=Hybrid, 9=Ikke oppgitt
+hybrid_kategori;Type hybrid;AN;1;363;;true;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
 drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;364;;;Angis i liter/100km og gjelder kombinert forbruk (ikke nødvendigvis oppgitt)
 partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;Oppgis i g/km for Lett euronorm, g/kwt for Tung euronorm
 nox_utslipp;NOX-utslipp;DEC4;5;372;;;Oppgis i g/km
-vrakpant_utbetalt;Dato for utbet vrakpant;NUM;8;377;;;Kun utfyllt dersom kjøretøyet er vraket
+vrakpant_utbetalt;Dato for utbet vrakpant;NUM;8;377;;true;Kun utfyllt dersom kjøretøyet er vraket

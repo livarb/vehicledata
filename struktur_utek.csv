@@ -5,10 +5,10 @@ reg_aar;Reg. år (mod-år);NUM;4;27;;true;
 typegodkjenningsnr;Typegodkjenningsnr.;NUM;11;31;;true;Består av: Godkjenningsnummer (1-4), variant (5-7) og år (8-11)
 reg_forsteg_norge;Reg. førsteg. Norge;NUM;8;42;;true;Dato for førstgangsregistrering i Norge
 bruktimportert;Bruktimportert;NUM;1;50;;true;1 - dersom bruktimportert
-avreg_dato;Avreg.dato;NUM;8;51;;;Dato for avregistrering
-farge;Farge;AN;20;59;;true;Se https://hotell.difi.no/?dataset=vegvesen/fargekode
-sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;79;;;Dato for siste godkjente periodiske kjøretøykontroll
-neste_pkk;Neste PKK;NUM;8;87;;;Dato for neste periodiske kjøretøykontroll
-siste_reg_dato;Siste reg.dato;NUM;8;95;;;Vognkortet er av ny type hvis > 20040601
-reg_1g_mnd_dag;Reg. 1g. mnd-dag;NUM;4;103;;;MMDD for førstgangsregistrering i Norge
-vrakpant_utbetalt;Dato for utbet.vrakpant;NUM;8;107;;;Kun utfyllt dersom kjøretøy er vraket
+avreg_dato;Avreg.dato;NUM;8;51;;true;Dato for avregistrering av kjøretøyet
+farge;Farge;AN;20;59;;;Se https://hotell.difi.no/?dataset=vegvesen/fargekode
+sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;79;;true;Dato for siste godkjente periodiske kjøretøykontroll
+neste_pkk;Neste PKK;NUM;8;87;;true;Dato for neste periodiske kjøretøykontroll
+siste_reg_dato;Siste reg.dato;NUM;8;95;;true;Vognkortet er av ny type hvis > 20040601
+reg_1g_mnd_dag;Reg. 1g. mnd-dag;AN;4;103;;true;MMDD for førstgangsregistrering i Norge
+vrakpant_utbetalt;Dato for utbet.vrakpant;NUM;8;107;;true;Kun utfyllt dersom kjøretøyet er vraket
