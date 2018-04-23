@@ -14,7 +14,7 @@ lengde;Lengde;NUM;4;101;;;Oppgis i cm
 bredde;Bredde;NUM;3;105;;;Oppgis i cm
 std_dekk_foran;Std. dekk foran;AN;15;108;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kalles profil og angis i % av dekkbredde, R15=felgens diameter i tommer
 std_dekk_bak;Std. dekk bak;AN;15;123;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kalles profil og angis i % av dekkbredde, R15=felgens diameter i tommer
-std_felg_foran;Std. felg forran;AN;8;138;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
+std_felg_foran;Std. felg foran;AN;8;138;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
 std_felg_bak;Std. felg bak;AN;8;146;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
 min_li_foran;Min. LI foran;AN;9;154;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
 min_li_bak;Min. LI bak;AN;9;163;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
@@ -31,7 +31,7 @@ akseltrykk_bak;Akseltrykk bak;NUM;6;212;;;Oppgis i kg
 eu_variant;EU-variant;AN;20;218;;;Ingen relevans, kommer fra typegodkjenning
 eu_versjon;Eu-versjon;AN;24;238;;;Ingen relevans, kommer fra typegodkjenning
 bruktimportert;Bruktimportert;NUM;1;262;;true;1 - dersom bruktimportert
-avreg_dato;Avreg dato;NUM;8;263;;true;Dato for avregistrering av kjøretøyet
+avreg_dato;Avreg.dato;NUM;8;263;;true;Dato for avregistrering av kjøretøyet
 farge;Farge;AN;20;271;;;Se https://hotell.difi.no/?dataset=vegvesen/fargekode
 antall_aksler;Antall aksler;NUM;2;291;;true;
 antall_aksler_drift;Antall aksler med drift;NUM;1;293;;true;
@@ -45,7 +45,7 @@ ytelsesmaal;Ytelsesmål;NUM;1;323;;true;1 = KW, 2 = HK, ellers ukjent/mangler
 sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;324;;true;Dato for siste godkjente periodiske kjøretøykontroll
 neste_pkk;Neste PKK;NUM;8;332;;true;Dato for neste periodiske kjøretøykontroll
 siste_reg_dato;Siste reg.dato;NUM;8;340;;true;Vognkortet er av ny type hvis > 20040601
-reg1g;Reg. 1g. mnd-dag;AN;4;348;;;MMDD for førstgangsregistrering i Norge
+reg1g;Reg. 1g. mnd-dag;NUM;4;348;;true;MMDD for førstgangsregistrering i Norge
 co2_utslippp;Co2-utslipp;NUM;4;352;;;Oppgis i gram pr. kilometer
 euronorm;Euronorm;AN;1;356;;;
 sitteplasser;Sitteplasser totalt;NUM;2;357;;true;
@@ -56,4 +56,4 @@ hybrid_kategori;Type hybrid;AN;1;363;;true;1=PLGIN, 2=NOPLG, X=N.A., Z=Annet
 drivstoff_forbruk;Drivstoff-forbruk;DEC1;3;364;;;Angis i liter/100km og gjelder kombinert forbruk (ikke nødvendigvis oppgitt)
 partikkelutslipp;Partikkelutslipp;DEC4;5;367;;;Oppgis i g/km for Lett euronorm, g/kwt for Tung euronorm
 nox_utslipp;NOX-utslipp;DEC4;5;372;;;Oppgis i g/km
-vrakpant_utbetalt;Dato for utbet vrakpant;NUM;8;377;;true;Kun utfyllt dersom kjøretøyet er vraket
+vrakpant_utbetalt;Dato for utbet. vrakpant;NUM;8;377;;true;Kun utfyllt dersom kjøretøyet er vraket

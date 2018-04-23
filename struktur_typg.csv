@@ -15,12 +15,12 @@ std_dekk_foran;Std. dekk foran;AN;15;191;;;Eks :195/65R15 : 195= dekkbredde(mm),
 std_dekk_bak;Std. dekk bak;AN;15;206;;;Eks :195/65R15 : 195= dekkbredde(mm), 65=høyden på kanten av dekket fra felgen og ut, kalles profil og angis i % av dekkbredde, R15=felgens diameter i tommer
 std_felg_foran;Std. felg foran;AN;8;221;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
 std_felg_bak;Std. felg bak;AN;8;229;;;F.eks: 6J-6 der 6=felgens bredde i tommer og J=type felg (J er for det meste standard)
-min_li_foran;Min LI foran;AN;9;237;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
-min_li_bak;Min LI bak;AN;9;246;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
-min_hast_foran;Min hast foran;AN;4;255;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
-min_hast_bak;Min hast bak;AN;4;259;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
-min_innpress_foran;Min innpress foran;NUM;4;263;;;F.eks. 18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
-min_innpress_bak;Min innpress bak;NUM;4;267;;;F.eks. 18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
+min_li_foran;Min. LI foran;AN;9;237;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
+min_li_bak;Min. LI bak;AN;9;246;;;LI står for Load Index, og er belastningskoden for dekket, og angir maks vekt dekket er konstruert for. Se https://hotell.difi.no/?dataset=vegvesen/belastningstabell
+min_hast_foran;Min. hast. foran;AN;4;255;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
+min_hast_bak;Min. hast. bak;AN;4;259;;;Hastighetskode (SI=Speed Index) for dekk. Se https://hotell.difi.no/?dataset=vegvesen/hastighetstabell
+min_innpress_foran;Min. innpress foran;NUM;4;263;;;F.eks. 18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
+min_innpress_bak;Min. innpress bak;NUM;4;267;;;F.eks. 18 mm innpress, vil si at anleggsflaten til felgen mot navet er 18mm fra senter av felgen ut fra bilen
 maks_sporv_foran;Maks sporv foran;AN;4;271;;;Oppgis i mm. Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
 maks_sporv_bak;Maks sporv bak;AN;4;275;;;Oppgis i mm. Sporvidden er avstanden senter – senter mellom dekkene på samme aksel
 motormerking;Motormerking;AN;30;279;;;Produsentens tekniske/spesifikke data om motoren, som regel i form av klistremerke på selve motoren

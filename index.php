@@ -215,7 +215,9 @@ if (CHECK_CODELISTS) {
 	}
 }
 
-$structDefs = array();
+if (CROSS_CHECK_STRUCT) {
+	$structDefs = array();
+}
 
 foreach ($input as $files) {
 	$structFile = $files[1];
@@ -225,7 +227,7 @@ foreach ($input as $files) {
 	$data = parseCSV($dataRaw);
 
 	validateStructData($data, $structFile);
-	if (DEBUG) {
+	if (CROSS_CHECK_STRUCT) {
 		crossCheckStruct($data, $files[0]);
 	}
 
