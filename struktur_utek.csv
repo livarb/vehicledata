@@ -8,6 +8,6 @@ avreg_dato;Avreg.dato;NUM;8;44;;true;Dato for avregistrering av kjøretøyet
 farge;Farge;AN;20;52;;;Se https://hotell.difi.no/?dataset=vegvesen/fargekode
 sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;72;;true;Dato for siste godkjente periodiske kjøretøykontroll
 neste_pkk;Neste PKK;NUM;8;80;;true;Dato for neste periodiske kjøretøykontroll
-siste_reg_dato;Siste reg.dato;NUM;8;98;;true;Vognkortet er av ny type hvis > 20040601
-reg1g;Reg. 1g. mnd-dag;NUM;4;96;;true;MMDD for førstgangsregistrering i Norge
+siste_reg_dato;Siste reg.dato;NUM;8;88;;true;Vognkortet er av ny type hvis > 20040601
+reg1g;Reg. 1g. mnd-dag;AN;4;96;;true;MMDD for førstgangsregistrering i Norge
 vrakpant_utbetalt;Dato for utbet. vrakpant;NUM;8;100;;true;Kun utfyllt dersom kjøretøyet er vraket

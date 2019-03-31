@@ -85,8 +85,9 @@ function printStructError($msg, $value, $structFile, $lineNum) {
 	print("$structFile line $lineNum: $msg — «" . $value . "»<br/>\n");
 }
 
-function validateStructData($data) {
+function validateStructData($data, $structFile) {
 	// Check structure-file
+	$lastpos = 1;
 	for ($i = 0; $i < count($data); $i++) {
 		$row = $data[$i];
 
@@ -127,6 +128,11 @@ function validateStructData($data) {
 
 		// «kommentar» is not evaluated
 
+		// check that structure-file is continuous
+		if ($row["startpos"] != $lastpos) {
+			printStructError("Gap. Column does not follow previous column. Starts as " . $row["startpos"] . " in stead of $lastpos.", $row["kortnamn"], $structFile, $i);
+		}
+		$lastpos += $row["lengde"];
 		// TODO: check that there are no gaps in character-positions covered in a line
 	}
 }
