@@ -44,7 +44,7 @@ ytelsesmaal;Ytelsesmål;NUM;1;316;;true;1 = KW, 2 = HK, ellers ukjent/mangler
 sist_pkk_godkjent;Sist pkk-godkjent;NUM;8;317;;true;Dato for siste godkjente periodiske kjøretøykontroll
 neste_pkk;Neste PKK;NUM;8;325;;true;Dato for neste periodiske kjøretøykontroll
 siste_reg_dato;Siste reg.dato;NUM;8;333;;true;Vognkortet er av ny type hvis > 20040601
-reg1g;Reg. 1g. mnd-dag;NUM;4;341;;true;MMDD for førstgangsregistrering i Norge
+reg1g;Reg. 1g. mnd-dag;AN;4;341;;true;MMDD for førstgangsregistrering i Norge
 co2_utslippp;Co2-utslipp;NUM;4;345;;;Oppgis i gram pr. kilometer
 euronorm;Euronorm;AN;1;349;;;
 sitteplasser;Sitteplasser totalt;NUM;2;350;;true;
