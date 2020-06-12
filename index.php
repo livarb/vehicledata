@@ -62,7 +62,7 @@ function createMetaText($title) {
 	$text .= "<metadata>\n"
 		. "\t<name>$title</name>\n"
 		. "\t<updated>" . time() . "</updated>\n"
-		. "\t<active>false</active>\n"
+		. "\t<active>true</active>\n"
 		. "</metadata>\n";
 	return $text;
 }
@@ -290,7 +290,7 @@ foreach ($input as $files) {
     		continue;
     	}
 
-		if ($lineNum % 100000 == 0) {
+		if ($lineNum % 50000 == 0) {
 			// renew PHP-script timeout to keep going
 	    	set_time_limit(30);
 		}
