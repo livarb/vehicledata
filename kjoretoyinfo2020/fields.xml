@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datasetFields>
+  <fields>
+    <field>
+      <name>Understellsnr.</name>
+      <shortName>tekn_unr</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content>Understellsnummer</content>
+    </field>
+    <field>
+      <name>Reg.år</name>
+      <shortName>tekn_reg_aar</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>År for registrering første gang</content>
+    </field>
+    <field>
+      <name>Reg. 1.gang Norge</name>
+      <shortName>tekn_f_g_n</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content>Dato for registrering første gang i Norge (YYYY-MM-DD)</content>
+    </field>
+    <field>
+      <name>Avreg.</name>
+      <shortName>tekn_avreg_dato</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Dato for avregistrering (YYYY-MM-DD)</content>
+    </field>
+    <field>
+      <name>Bruktimport</name>
+      <shortName>tekn_bruktimp</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Bruktimportert Ja/Nei (1/0)</content>
+    </field>
+    <field>
+      <name>Merkekode</name>
+      <shortName>tekn_merke</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Merkenavn</name>
+      <shortName>tekn_merkenavn</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Modell</name>
+      <shortName>tekn_modell</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content>Modellbetegnelse</content>
+    </field>
+    <field>
+      <name>Teknisk kode</name>
+      <shortName>tekn_tknavn</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Teknisk kode (EU)</content>
+    </field>
+    <field>
+      <name>Teknisk underkode</name>
+      <shortName>tekn_tuk_verdi</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Teknisk underkode (EU/NO)</content>
+    </field>
+    <field>
+      <name>Avgiftskode</name>
+      <shortName>tekn_kjtgrp</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Avgiftskode (NO)</content>
+    </field>
+    <field>
+      <name>Effekt</name>
+      <shortName>tekn_motorytelse</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Motoreffekt i kW, eldre kjøretøy i hk</content>
+    </field>
+    <field>
+      <name>Slagvolum</name>
+      <shortName>tekn_slagvolum</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Drivstoffkode</name>
+      <shortName>tekn_drivst</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Girkassetype</name>
+      <shortName>tekn_girkasse</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Girkassetype (Man/Aut)</content>
+    </field>
+    <field>
+      <name>Hybrid</name>
+      <shortName>tekn_hybrid</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Hybrid Ja/Nei/Annen (1/0/9)</content>
+    </field>
+    <field>
+      <name>Hybridkategori</name>
+      <shortName>tekn_hybrid_kategori</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Hybridkategori (1=ladbar, 2=ikke ladbar, X=ingen, Z=annen)</content>
+    </field>
+    <field>
+      <name>Till. totalvekt</name>
+      <shortName>tekn_totvekt</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Tillatt totalvekt</content>
+    </field>
+    <field>
+      <name>Egenvekt</name>
+      <shortName>tekn_egenvekt</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Egenvekt uten fører</content>
+    </field>
+    <field>
+      <name>Till. vogntogvekt</name>
+      <shortName>tekn_vogntogvekt</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Tillatt vogntogvekt</content>
+    </field>
+    <field>
+      <name>Till. taklast</name>
+      <shortName>tekn_maks_taklast</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt taklast</content>
+    </field>
+    <field>
+      <name>Till. tilh.vekt m/brems</name>
+      <shortName>tekn_thv_m_brems</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt tilhengervekt med brems</content>
+    </field>
+    <field>
+      <name>Till. tilh.vekt u/brems</name>
+      <shortName>tekn_thv_u_brems</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt tilhengervekt uten brems</content>
+    </field>
+    <field>
+      <name>Till. koblingslast</name>
+      <shortName>tekn_bel_h_feste</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt koblingslast (vekt på hengerfestet)</content>
+    </field>
+    <field>
+      <name>Lengde</name>
+      <shortName>tekn_lengde</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Bredde</name>
+      <shortName>tekn_bredde</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Farge</name>
+      <shortName>tekn_farge</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Fargekode/r</content>
+    </field>
+    <field>
+      <name>Sitteplasser foran</name>
+      <shortName>tekn_sitteplasserforan</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sitteplasser totalt</name>
+      <shortName>tekn_sitteplasser_totalt</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Ant. aksler</name>
+      <shortName>tekn_aksler</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Antall aksler totalt</content>
+    </field>
+    <field>
+      <name>Ant.aksler m/drift</name>
+      <shortName>tekn_aksler_drift</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Antall aksler med drift</content>
+    </field>
+    <field>
+      <name>Akselavstand 1</name>
+      <shortName>tekn_minavst_ms1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Avstand fra aksel 1 til aksel 2 (forfra)</content>
+    </field>
+    <field>
+      <name>Akselavstand 2</name>
+      <shortName>tekn_minavst_ms2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Avstand fra aksel 2 til aksel 3 (forfra)</content>
+    </field>
+    <field>
+      <name>Dekkdim. aksel 1</name>
+      <shortName>tekn_dekk_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Dekkdimensjon aksel 1</content>
+    </field>
+    <field>
+      <name>Dekkdim. aksel 2</name>
+      <shortName>tekn_dekk_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Dekkdimensjon aksel 2</content>
+    </field>
+    <field>
+      <name>Dekkdim. aksel 3</name>
+      <shortName>tekn_dekk_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Dekkdimensjon aksel 3</content>
+    </field>
+    <field>
+      <name>Flere aksler?</name>
+      <shortName>tekn_dekk_f</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Verdien 1 angir om det er flere aksler</content>
+    </field>
+    <field>
+      <name>Felgdim. aksel 1</name>
+      <shortName>tekn_felg_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Felgdimensjon aksel 1</content>
+    </field>
+    <field>
+      <name>Felgdim. aksel 2</name>
+      <shortName>tekn_felg_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Felgdimensjon aksel 2</content>
+    </field>
+    <field>
+      <name>Felgdim. aksel 3</name>
+      <shortName>tekn_felg_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Felgdimensjon aksel 3</content>
+    </field>
+    <field>
+      <name>Lastindeks aksel 1</name>
+      <shortName>tekn_mili_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Lastindeks aksel 2</name>
+      <shortName>tekn_mili_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Lastindeks aksel 3</name>
+      <shortName>tekn_mili_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Hastighetskode aksel 1</name>
+      <shortName>tekn_hast_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Hastighetskode aksel 2</name>
+      <shortName>tekn_hast_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Hastighetskode aksel 3</name>
+      <shortName>tekn_hast_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Innpress aksel 1</name>
+      <shortName>tekn_innp_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Innpress aksel 2</name>
+      <shortName>tekn_innp_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Innpress aksel 3</name>
+      <shortName>tekn_innp_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sporvidde aksel 1</name>
+      <shortName>tekn_spor_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sporvidde aksel 2</name>
+      <shortName>tekn_spor_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Sporvidde aksel 3</name>
+      <shortName>tekn_spor_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Till. last aksel 1</name>
+      <shortName>tekn_last_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt last aksel 1</content>
+    </field>
+    <field>
+      <name>Till. last aksel 2</name>
+      <shortName>tekn_last_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt last aksel 2</content>
+    </field>
+    <field>
+      <name>Till. last aksel 3</name>
+      <shortName>tekn_last_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Tillatt last aksel 3</content>
+    </field>
+    <field>
+      <name>Norsk godkjenningsnr.</name>
+      <shortName>tekn_ngn</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>Norsk godkjenningsnummer (NGN)</content>
+    </field>
+    <field>
+      <name>Typegodkjenningsnr.</name>
+      <shortName>tekn_eu_hoved</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>EU typegodkjenningsnummer</content>
+    </field>
+    <field>
+      <name>Euronorm</name>
+      <shortName>tekn_euronorm_ny</shortName>
+      <groupable>false</groupable>
+      <searchable>true</searchable>
+      <content>EU avgasskode</content>
+    </field>
+    <field>
+      <name>TG typekode</name>
+      <shortName>tekn_eu_type</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>EU typekode</content>
+    </field>
+    <field>
+      <name>TG variant</name>
+      <shortName>tekn_eu_variant</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>EU variant</content>
+    </field>
+    <field>
+      <name>TG versjon</name>
+      <shortName>tekn_eu_versjon</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>EU versjon</content>
+    </field>
+    <field>
+      <name>Siste PKK</name>
+      <shortName>tekn_siste_pkk</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Dato for sist gjennomført EU-kontroll (YYYY-MM-DD)</content>
+    </field>
+    <field>
+      <name>Frist neste PKK</name>
+      <shortName>tekn_neste_pkk</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Frist for neste EU-kontroll (YYYY-MM-DD)</content>
+    </field>
+    <field>
+      <name>Standstøy</name>
+      <shortName>tekn_standstoy</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Partikkelfilter</name>
+      <shortName>tekn_partikkelfilter</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>NOx mg/km</name>
+      <shortName>tekn_nox_utslipp_mgprkh</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>NOx-utslipp i mg/km ("lette biler")</content>
+    </field>
+    <field>
+      <name>NOx g/kWh</name>
+      <shortName>tekn_nox_utslipp_gprkwh</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>NOx-utslipp i g/kWh ("tunge biler")</content>
+    </field>
+    <field>
+      <name>Partikkelutslipp</name>
+      <shortName>tekn_partikkelutslipp</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Partikkelutslipp i mg/km</content>
+    </field>
+    <field>
+      <name>Målemetode</name>
+      <shortName>tekn_maalemetode</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Målemetode (WLTP/NEDC/EPA/NRCAN/ANNEN)</content>
+    </field>
+    <field>
+      <name>CO2-utslipp</name>
+      <shortName>tekn_co2_utslipp</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>CO2-utslipp i g/km</content>
+    </field>
+    <field>
+      <name>Drivstofforbruk</name>
+      <shortName>tekn_drivstoff_forbruk</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Drivstofforbruk i l/100 km</content>
+    </field>
+  </fields>
+</datasetFields>
