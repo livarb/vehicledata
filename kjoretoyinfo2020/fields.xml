@@ -11,21 +11,21 @@
     <field>
       <name>Reg.år</name>
       <shortName>tekn_reg_aar</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>År for registrering første gang</content>
     </field>
     <field>
       <name>Reg. 1.gang Norge</name>
       <shortName>tekn_f_g_n</shortName>
-      <groupable>true</groupable>
-      <searchable>true</searchable>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
       <content>Dato for registrering første gang i Norge (YYYY-MM-DD)</content>
     </field>
     <field>
       <name>Avreg.</name>
       <shortName>tekn_avreg_dato</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Dato for avregistrering (YYYY-MM-DD)</content>
     </field>
@@ -53,7 +53,7 @@
     <field>
       <name>Modell</name>
       <shortName>tekn_modell</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>true</searchable>
       <content>Modellbetegnelse</content>
     </field>
@@ -74,14 +74,14 @@
     <field>
       <name>Avgiftskode</name>
       <shortName>tekn_kjtgrp</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content>Avgiftskode (NO)</content>
     </field>
     <field>
       <name>Effekt</name>
       <shortName>tekn_motorytelse</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Motoreffekt i kW, eldre kjøretøy i hk</content>
     </field>
@@ -95,50 +95,50 @@
     <field>
       <name>Drivstoffkode</name>
       <shortName>tekn_drivst</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Girkassetype</name>
       <shortName>tekn_girkasse</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content>Girkassetype (Man/Aut)</content>
     </field>
     <field>
       <name>Hybrid</name>
       <shortName>tekn_hybrid</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content>Hybrid Ja/Nei/Annen (1/0/9)</content>
     </field>
     <field>
       <name>Hybridkategori</name>
       <shortName>tekn_hybrid_kategori</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content>Hybridkategori (1=ladbar, 2=ikke ladbar, X=ingen, Z=annen)</content>
     </field>
     <field>
       <name>Till. totalvekt</name>
       <shortName>tekn_totvekt</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content>Tillatt totalvekt</content>
     </field>
     <field>
       <name>Egenvekt</name>
       <shortName>tekn_egenvekt</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content>Egenvekt uten fører</content>
     </field>
     <field>
       <name>Till. vogntogvekt</name>
       <shortName>tekn_vogntogvekt</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content>Tillatt vogntogvekt</content>
     </field>
     <field>
@@ -173,14 +173,14 @@
       <name>Lengde</name>
       <shortName>tekn_lengde</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Bredde</name>
       <shortName>tekn_bredde</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content></content>
     </field>
     <field>
@@ -194,21 +194,21 @@
       <name>Sitteplasser foran</name>
       <shortName>tekn_sitteplasserforan</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Sitteplasser totalt</name>
       <shortName>tekn_sitteplasser_totalt</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content></content>
     </field>
     <field>
       <name>Ant. aksler</name>
       <shortName>tekn_aksler</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content>Antall aksler totalt</content>
     </field>
     <field>
@@ -256,7 +256,7 @@
     <field>
       <name>Flere aksler?</name>
       <shortName>tekn_dekk_f</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Verdien 1 angir om det er flere aksler</content>
     </field>
@@ -390,7 +390,7 @@
       <name>Norsk godkjenningsnr.</name>
       <shortName>tekn_ngn</shortName>
       <groupable>false</groupable>
-      <searchable>true</searchable>
+      <searchable>false</searchable>
       <content>Norsk godkjenningsnummer (NGN)</content>
     </field>
     <field>
@@ -403,8 +403,8 @@
     <field>
       <name>Euronorm</name>
       <shortName>tekn_euronorm_ny</shortName>
-      <groupable>false</groupable>
-      <searchable>true</searchable>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
       <content>EU avgasskode</content>
     </field>
     <field>
@@ -431,14 +431,14 @@
     <field>
       <name>Siste PKK</name>
       <shortName>tekn_siste_pkk</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Dato for sist gjennomført EU-kontroll (YYYY-MM-DD)</content>
     </field>
     <field>
       <name>Frist neste PKK</name>
       <shortName>tekn_neste_pkk</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Frist for neste EU-kontroll (YYYY-MM-DD)</content>
     </field>
@@ -452,7 +452,7 @@
     <field>
       <name>Partikkelfilter</name>
       <shortName>tekn_partikkelfilter</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>
@@ -480,14 +480,14 @@
     <field>
       <name>Målemetode</name>
       <shortName>tekn_maalemetode</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Målemetode (WLTP/NEDC/EPA/NRCAN/ANNEN)</content>
     </field>
     <field>
       <name>CO2-utslipp</name>
       <shortName>tekn_co2_utslipp</shortName>
-      <groupable>true</groupable>
+      <groupable>false</groupable>
       <searchable>false</searchable>
       <content>CO2-utslipp i g/km</content>
     </field>
