@@ -41,7 +41,7 @@
       <shortName>tekn_merke</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Merkekoder</content>
     </field>
     <field>
       <name>Merkenavn</name>
@@ -76,7 +76,7 @@
       <shortName>tekn_kjtgrp</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Avgiftskode (NO)</content>
+      <content>Avgiftskode (NO). Hjelpedatasett: Kjøretøygrupper</content>
     </field>
     <field>
       <name>Effekt</name>
@@ -97,7 +97,7 @@
       <shortName>tekn_drivst</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Drivstoffkoder</content>
     </field>
     <field>
       <name>Girkassetype</name>
@@ -132,7 +132,7 @@
       <shortName>tekn_egenvekt</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Egenvekt uten fører</content>
+      <content>Egenvekt uten fører (75 kg)</content>
     </field>
     <field>
       <name>Till. vogntogvekt</name>
@@ -188,7 +188,7 @@
       <shortName>tekn_farge</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Fargekode/r</content>
+      <content>Fargekode/r Hjelpedatasett: Fargekoder</content>
     </field>
     <field>
       <name>Sitteplasser foran</name>
@@ -286,42 +286,42 @@
       <shortName>tekn_mili_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Belastningstabell</content>
     </field>
     <field>
       <name>Lastindeks aksel 2</name>
       <shortName>tekn_mili_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Belastningstabell</content>
     </field>
     <field>
       <name>Lastindeks aksel 3</name>
       <shortName>tekn_mili_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Belastningstabell</content>
     </field>
     <field>
       <name>Hastighetskode aksel 1</name>
       <shortName>tekn_hast_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Hastighetstabell</content>
     </field>
     <field>
       <name>Hastighetskode aksel 2</name>
       <shortName>tekn_hast_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Hastighetstabell</content>
     </field>
     <field>
       <name>Hastighetskode aksel 3</name>
       <shortName>tekn_hast_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Hjelpedatasett: Hastighetstabell</content>
     </field>
     <field>
       <name>Innpress aksel 1</name>
@@ -405,7 +405,7 @@
       <shortName>tekn_euronorm_ny</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>EU avgasskode</content>
+      <content>EU avgasskode. Hjelpedatasett: Euronorm</content>
     </field>
     <field>
       <name>TG typekode</name>
@@ -447,14 +447,14 @@
       <shortName>tekn_standstoy</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Måleenhet desibel (dB)</content>
     </field>
     <field>
       <name>Partikkelfilter</name>
       <shortName>tekn_partikkelfilter</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>0 = ukjent/ikke oppgitt, 1 = nei, 2 = ja</content>
     </field>
     <field>
       <name>NOx mg/km</name>
@@ -489,7 +489,7 @@
       <shortName>tekn_co2_utslipp</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>CO2-utslipp i g/km</content>
+      <content>CO2-utslipp i g/km ("lette biler")</content>
     </field>
     <field>
       <name>Drivstofforbruk</name>
