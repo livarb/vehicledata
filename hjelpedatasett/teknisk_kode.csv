@@ -1,0 +1,46 @@
+kode;beskrivelse
+BB;Beltebil
+BM;Beltemotorsykkel
+C1;Beltetraktor med maksimal hastighet 40 km/t eller mindre, minste sporvidde for akselen nærmest føreren 1150 mm eller over, egenvekt over 600 kg, frihøyde 1000 mm eller mindre. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+C2;Beltetraktor med maksimal hastighet 40 km/t eller mindre, minste sporvidde under 1150 mm, egenvekt over 600 kg, frihøyde ikke over 600 mm. Når tyngdepunktshøyde delt på sporvidde er over 0,9, er maksimal hastighet 30 km/t. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+C3;Beltetraktor med maksimal hastighet 40 km/t eller mindre og egenvekt 600 kg eller mindre. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+C4;Beltetraktor til særlige formål og med maksimal hastighet 40 km/t eller mindre. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+C5;Beltetraktor med maksimal hastighet over 40 km/t. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+L1e;Moped
+L2e;Moped med 3 hjul
+L3e;Motorsykkel (lett -, mellomtung – og tung motorsykkel).
+L4e;Motorsykkel med sidevogn
+L5e;Motorsykkel med 3 hjul
+L6e;Moped med 4 hjul
+L7e;Motorsykkel med 4 hjul
+M1;Bil for persontransport med høyst 8 sitteplasser i tillegg til førersetet (Personbil)
+M1G;Terrenggående bil for persontransport med høyst 8 sitteplasser i tillegg til førersetet
+M2;Bil for persontransport med over 8 sitteplasser i tillegg til førersetet og tillatt totalvekt ikke over 5000 kg
+M2G;Terrenggående bil for persontransport med over 8 sitteplasser i tillegg til førersetet og tillatt totalvekt ikke over 5000 kg
+M3;Bil for persontransport med over 8 sitteplasser i tillegg til førersetet og tillatt totalvekt over 5 000 kg (Buss)
+M3G;Terrenggående bil for persontransport med over 8 sitteplasser i tillegg til førersetet og tillatt totalvekt over 5 000 kg (Buss)
+MCL;Lett motorsykkel (reg i Norge før 9. november 2003)
+MCM;Moped (reg i Norge før 9. november 2003)
+MCT;Tung motorsykkel (reg i Norge før 9. november 2003)
+MR;Motorredskap
+N1;Bil for godsbefordring med tillatt totalvekt ikke over 3 500 kg (Varebil)
+N1G;Terrenggående bil for godsbefordring med tillatt totalvekt ikke over 3 500 kg
+N2;Bil for godsbefordring med tillatt totalvekt på over 3 500 kg, men ikke over 12 000 kg (Lastebil)
+N2G;Terrenggående bil for godsbefordring med tillatt totalvekt på over 3 500 kg, men ikke over 12 000 kg (Lastebil)
+N3;Bil for godsbefordring med tillatt totalvekt over 12 000 kg (Lastebil)
+N3G;Terrenggående bil for godsbefordring med tillatt totalvekt over 12 000 kg (Lastebil)
+O1;Tilhenger med tillatt totalvekt ikke over 750 kg. For påhengsvogn og semitrailer skal summen av tillatte aksellaster legges til grunn for klassifiseringen.
+O2;Tilhenger med tillatt totalvekt over 750 kg, men ikke over 3 500 kg. For påhengsvogn og semitrailer skal summen av tillatte aksellaster legges til grunn for klassifiseringen.
+O3;Tilhenger med tillatt totalvekt over 3 500 kg, men ikke over 10 000 kg. For påhengsvogn og semitrailer skal summen av tillatte aksellaster legges til grunn for klassifiseringen.
+O4;Tilhenger med tillatt totalvekt over 10 000 kg. For påhengsvogn og semitrailer skal summen av tillatte aksellaster legges til grunn for klassifiseringen.
+R1;Tilhenger til traktor der summen av tillatte aksellaster ikke er over 1500 kg.
+R2;Tilhenger til traktor der summen av tillatte aksellaster er over 1500 kg, men ikke over 3500 kg.
+R3;Tilhenger til traktor der summen av tillatte aksellaster er 3500 kg, men ikke over 21000 kg.
+R4;Tilhenger til traktor der summen av tillatte aksellaster er over 21000 kg.
+T1;Traktor med maksimal hastighet 40 km/t eller mindre, minste sporvidde for akselen nærmest føreren 1150 mm eller over, egenvekt over 600 kg, frihøyde 1000 mm eller mindre. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+T2;Traktor med maksimal hastighet 40 km/t eller mindre, minste sporvidde under 1150 mm, egenvekt over 600 kg, frihøyde ikke over 600 mm. Når tyngdepunktshøyde delt på sporvidde er over 0,9, er maksimal hastighet 30 km/t. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+T3;Traktor med maksimal hastighet 40 km/t eller mindre og egenvekt 600 kg eller mindre. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+T4;Traktor til særlige formål og med maksimal hastighet 40 km/t eller mindre. Omfatter Jordbruks- eller skogbrukstraktor og traktor godkjent 1. juli 2005 og senere.
+T5;Traktor med maksimal hastighet over 40 km/t. Omfatter traktor godkjent 1. juli 2005 og senere.
+TR;Traktor (Godkjente før 1. juli 2005)
+TT;Traktortilhenger (reg i Norge før 1. juli 2005)
