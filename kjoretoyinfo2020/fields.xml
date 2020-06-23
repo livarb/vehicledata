@@ -60,7 +60,7 @@
     <field>
       <name>Teknisk kode</name>
       <shortName>tekn_tknavn</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Teknisk kode (EU). Hjelpedatasett: Teknisk kode</content>
     </field>
