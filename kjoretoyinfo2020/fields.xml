@@ -62,7 +62,7 @@
       <shortName>tekn_tknavn</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Teknisk kode (EU)</content>
+      <content>Teknisk kode (EU). Hjelpedatasett: Teknisk kode</content>
     </field>
     <field>
       <name>Teknisk underkode</name>
@@ -83,7 +83,7 @@
       <shortName>tekn_motorytelse</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Motoreffekt i kW, eldre kjøretøy i hk</content>
+      <content>Motoreffekt i kW, eldre kjøretøy i hk. En verdi pr. motor</content>
     </field>
     <field>
       <name>Slagvolum</name>
@@ -97,7 +97,7 @@
       <shortName>tekn_drivst</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Drivstoffkoder</content>
+      <content>En verdi pr. motor. Hjelpedatasett: Drivstoffkoder</content>
     </field>
     <field>
       <name>Girkassetype</name>
@@ -188,7 +188,7 @@
       <shortName>tekn_farge</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Fargekode/r Hjelpedatasett: Fargekoder</content>
+      <content>Fargekode/r. Hjelpedatasett: Fargekoder</content>
     </field>
     <field>
       <name>Sitteplasser foran</name>
@@ -482,7 +482,7 @@
       <shortName>tekn_maalemetode</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Målemetode (WLTP/NEDC/EPA/NRCAN/ANNEN)</content>
+      <content>Målemetode (WLTP/NEDC/EPA/NRCAN/ANNEN). Flere verdier kan finnes</content>
     </field>
     <field>
       <name>CO2-utslipp</name>
