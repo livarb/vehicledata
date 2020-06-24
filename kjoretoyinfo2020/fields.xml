@@ -11,23 +11,23 @@
     <field>
       <name>Reg.år</name>
       <shortName>tekn_reg_aar</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
       <content>År for registrering første gang</content>
     </field>
     <field>
       <name>Reg. 1.gang Norge</name>
       <shortName>tekn_f_g_n</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Dato for registrering første gang i Norge (YYYY-MM-DD)</content>
+      <content>Dato for registrering første gang i Norge (YYYYMMDD)</content>
     </field>
     <field>
       <name>Avreg.</name>
       <shortName>tekn_avreg_dato</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Dato for avregistrering (YYYY-MM-DD)</content>
+      <content>Dato for avregistrering (YYYYMMDD)</content>
     </field>
     <field>
       <name>Bruktimport</name>
@@ -431,16 +431,16 @@
     <field>
       <name>Siste PKK</name>
       <shortName>tekn_siste_pkk</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Dato for sist gjennomført EU-kontroll (YYYY-MM-DD)</content>
+      <content>Dato for sist gjennomført EU-kontroll (YYYYMMDD)</content>
     </field>
     <field>
       <name>Frist neste PKK</name>
       <shortName>tekn_neste_pkk</shortName>
-      <groupable>false</groupable>
+      <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Frist for neste EU-kontroll (YYYY-MM-DD)</content>
+      <content>Frist for neste EU-kontroll (YYYYMMDD)</content>
     </field>
     <field>
       <name>Standstøy</name>
