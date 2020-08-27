@@ -10,17 +10,15 @@ function microtime_float() {
 $time_start = microtime(true);
 
 $write = true;
-// $filename = "AKD-38_eksempel_16.04.20_10000rader.dsv";
-// $filename = "AKD-38_eksempel_16.04.20.dsv";
-// $filename = "AKD38_TEKNISKE_DATA_27.05.20.dsv";
+// $dir = "E:\svv\";
+// $filename = "DATA_NORGE_11.08.2020.dsv";
 // $filenameOutput = "dataset.csv";
 
 if (count($argv) == 4) {
-    // print("Got right number of arguments!\n");
     $dir = $argv[1];
     $filename = $argv[2];
     $filenameOutput = $argv[3];
-    // print("$dir\n$filename\n$filenameOutput\n\n");
+    print("Køyrer converteringsscript.\n\tKatalog: $dir\n\tInput-filnamn: $filename\n\tOutput-filnamn: $filenameOutput\n\n");
 } else {
     print("Wrong number of arguments!\n");
     print_r($argv);
@@ -44,8 +42,8 @@ if ($datasetFP === false) {
 $lineNr = 1;
 $numFields = -1;
 $errors = false;
-while ($lineRaw = fgets($datasetFP)) {
-    $line = utf8_encode($lineRaw);
+while ($line = fgets($datasetFP)) {
+    // $line = utf8_encode($lineRaw); // kun dersom input-fil er ISO-teiknsett. Endra til UTF8 frå august 2020
     $lineSplit = explode("¤", $line);
 
     for ($i = 0; $i < count($lineSplit); $i++) {
@@ -71,7 +69,7 @@ while ($lineRaw = fgets($datasetFP)) {
         print("Fields: $numFields\n\n");
     } else {
         if (count($lineSplit) !== $numFields) {
-            print("Wrong number of fields!\n");
+            print("Wrong number of fields! $lineNr\n");
             print($line);
             exit(5);
         }
