@@ -27,7 +27,14 @@
       <shortName>tekn_avreg_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Dato for avregistrering (YYYYMMDD)</content>
+      <content>Dato for midlertidig avregistrering (YYYYMMDD)</content>
+    </field>
+    <field>
+      <name>Reg.status</name>
+      <shortName>tekn_reg_status</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Registreringsstatus (Registrert, Avregistrert, Vraket, Utført)</content>
     </field>
     <field>
       <name>Bruktimport</name>
@@ -182,6 +189,13 @@
       <groupable>false</groupable>
       <searchable>false</searchable>
       <content></content>
+    </field>
+    <field>
+      <name>Dører</name>
+      <shortName>tekn_antall_dorer</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Antall dører</content>
     </field>
     <field>
       <name>Farge</name>
@@ -385,6 +399,27 @@
       <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Tillatt last aksel 3</content>
+    </field>
+    <field>
+      <name>Luft aksel 1</name>
+      <shortName>tekn_luft_1</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Luftfjæring aksel 1</content>
+    </field>
+    <field>
+      <name>Luft aksel 2</name>
+      <shortName>tekn_luft_2</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Luftfjæring aksel 2</content>
+    </field>
+    <field>
+      <name>Luft aksel 3</name>
+      <shortName>tekn_luft_3</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Luftfjæring aksel 3</content>
     </field>
     <field>
       <name>Norsk godkjenningsnr.</name>
