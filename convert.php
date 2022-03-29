@@ -52,6 +52,9 @@ while ($line = fgets($datasetFP)) {
         } 
     }
 
+    // Fjernar første kolonne. Tomt felt der understellsnummer var før.
+    unset($lineSplit[0]);
+
     $lineCSV = implode(";", $lineSplit);
 
     if ($lineNr == 1) {
