@@ -2,13 +2,6 @@
 <datasetFields>
   <fields>
     <field>
-      <name>Understellsnr.</name>
-      <shortName>tekn_unr</shortName>
-      <groupable>true</groupable>
-      <searchable>true</searchable>
-      <content>Understellsnummer</content>
-    </field>
-    <field>
       <name>Reg.år</name>
       <shortName>tekn_reg_aar</shortName>
       <groupable>true</groupable>
