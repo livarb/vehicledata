@@ -7,6 +7,12 @@ function microtime_float() {
     return ((float)$usec + (float)$sec);
 }
 
+// https://www.php.net/manual/en/function.array-diff.php#120821
+function arrayDiff($A, $B) {
+    $intersect = array_intersect($A, $B);
+    return array_merge(array_diff($A, $intersect), array_diff($B, $intersect));
+}
+
 $time_start = microtime(true);
 
 $write = true;
@@ -14,11 +20,12 @@ $write = true;
 // $filename = "DATA_NORGE_11.08.2020.dsv";
 // $filenameOutput = "dataset.csv";
 
-if (count($argv) == 4) {
+if (count($argv) == 5) {
     $dir = $argv[1];
     $filename = $argv[2];
     $filenameOutput = $argv[3];
-    print("Køyrer converteringsscript.\n\tKatalog: $dir\n\tInput-filnamn: $filename\n\tOutput-filnamn: $filenameOutput\n\n");
+    $filenameFields = $argv[4];
+    print("Køyrer converteringsscript.\n\tKatalog: $dir\n\tInput-filnamn: $filename\n\tOutput-filnamn: $filenameOutput\n\tFields-filnamn: $filenameFields\n\n");
 } else {
     print("Wrong number of arguments!\n");
     print_r($argv);
@@ -37,6 +44,19 @@ $datasetFP = fopen($fileFullpath, 'r');
 if ($datasetFP === false) {
     print("Could not open input-file for reading: $fileFullpath\n");
     exit(3);
+}
+
+// Read fields.xml
+$fields = array();
+$fieldsLines = file($dir . $filenameFields);
+if ($fieldsLines === false) {
+    print("Could not read fields-file for reading: $dir$filenameFields\n");
+    exit(5);
+}
+foreach ($fieldsLines as $fieldsLine) {
+    if (strpos($fieldsLine, "<shortName>") !== false) {
+        $fields[] = trim(str_replace(array("<shortName>", "</shortName>"), "", $fieldsLine));
+    }
 }
 
 $lineNr = 1;
@@ -60,6 +80,17 @@ while ($line = fgets($datasetFP)) {
     if ($lineNr == 1) {
         $lineCSV = strtolower($lineCSV);
         $numFields = count($lineSplit);
+
+        // Sjekk mot fields.xml
+        $lineSplitLower = array_map('strtolower', $lineSplit);
+        $lineSplitLowerTrim = array_map('trim', $lineSplitLower);
+        $differanse = arrayDiff($lineSplitLowerTrim, $fields);
+        if (count($differanse) !== 0) {
+            print("Mismatch mellom CSV og fields.xml\n");
+            print(count($fields) . " felt i fields.xml — " . count($lineSplit) . " felt i CSV\n");
+            print("Følgande felt er ikkje i begge: " . implode(", ", $differanse) . "\n");
+            exit(6);
+        }
 
         print("Rådata: overskriftsrad\n");
         print($line . "\n");
