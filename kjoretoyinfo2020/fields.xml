@@ -2,6 +2,13 @@
 <datasetFields>
   <fields>
     <field>
+      <name>Kjennemerkefarge</name>
+      <shortName>tekn_kjm_farge</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content>Farge på kjennemerke (bilskilt)</content>
+    </field>    
+    <field>
       <name>Reg.år</name>
       <shortName>tekn_reg_aar</shortName>
       <groupable>true</groupable>
@@ -78,6 +85,13 @@
       <searchable>false</searchable>
       <content>Avgiftskode (NO). Hjelpedatasett: Kjøretøygrupper</content>
     </field>
+    <field>
+      <name>Motorkode</name>
+      <shortName>tekn_motorkode</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content>Motorekode fra fabrikk</content>
+    </field>    
     <field>
       <name>Effekt</name>
       <shortName>tekn_motorytelse</shortName>
