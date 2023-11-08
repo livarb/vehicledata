@@ -500,7 +500,7 @@
     </field>
     <field>
       <name>NOx mg/km</name>
-      <shortName>tekn_nox_utslipp_mgprkh</shortName>
+      <shortName>tekn_nox_utslipp_mgprkm</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
       <content>NOx-utslipp i mg/km ("lette biler")</content>
