@@ -9,13 +9,6 @@
       <content>Farge på kjennemerke (bilskilt)</content>
     </field>    
     <field>
-      <name>Reg.år</name>
-      <shortName>tekn_reg_aar</shortName>
-      <groupable>true</groupable>
-      <searchable>false</searchable>
-      <content>År for registrering første gang</content>
-    </field>
-    <field>
       <name>Reg. 1.gang Norge</name>
       <shortName>tekn_f_g_n</shortName>
       <groupable>true</groupable>
