@@ -10,7 +10,7 @@
     </field>    
     <field>
       <name>Reg. 1.gang Norge</name>
-      <shortName>tekn_f_g_n</shortName>
+      <shortName>tekn_reg_f_g_n</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Dato for registrering første gang i Norge (YYYYMMDD)</content>
@@ -101,7 +101,7 @@
     </field>
     <field>
       <name>Drivstoffkode</name>
-      <shortName>tekn_drivst</shortName>
+      <shortName>tekn_drivstoff</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>En verdi pr. motor. Hjelpedatasett: Drivstoffkoder</content>
