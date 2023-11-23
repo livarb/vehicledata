@@ -156,6 +156,20 @@
       <content>Hybridkategori (1=ladbar, 2=ikke ladbar, X=ingen, Z=annen)</content>
     </field>
     <field>
+      <name>Rekkevidde</name>
+      <shortName>tekn_rekkevidde</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Effekt pr halvtime</name>
+      <shortName>tekn_effekt_pr_halvtime</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
       <name>Till. totalvekt</name>
       <shortName>tekn_totvekt</shortName>
       <groupable>false</groupable>
@@ -231,6 +245,27 @@
       <groupable>false</groupable>
       <searchable>false</searchable>
       <content>Fargekode/r. Hjelpedatasett: Fargekoder</content>
+    </field>
+    <field>
+      <name>Karosseritype</name>
+      <shortName>tekn_karosseritype</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Spesialkarosseri</name>
+      <shortName>tekn_spesialkarosseri</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Påbygg</name>
+      <shortName>tekn_pabygg</shortName>
+      <groupable>false</groupable>
+      <searchable>false</searchable>
+      <content></content>
     </field>
     <field>
       <name>Sitteplasser foran</name>
