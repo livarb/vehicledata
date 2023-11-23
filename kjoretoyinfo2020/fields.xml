@@ -206,7 +206,7 @@
     </field>
     <field>
       <name>Sitteplasser foran</name>
-      <shortName>tekn_sitteplasserforan</shortName>
+      <shortName>tekn_sitteplasser_foran</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
       <content></content>
@@ -486,7 +486,7 @@
     </field>
     <field>
       <name>Partikkelfilter</name>
-      <shortName>tekn_partikkelfilter</shortName>
+      <shortName>tekn_partikkelfilter_fabrikkmontert</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>0 = ukjent/ikke oppgitt, 1 = nei, 2 = ja</content>
