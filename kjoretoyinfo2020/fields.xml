@@ -16,6 +16,20 @@
       <content>Dato for registrering første gang i Norge (YYYYMMDD)</content>
     </field>
     <field>
+      <name>Eierskifte dato</name>
+      <shortName>tekn_reg_eierskifte_dato</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>    
+    <field>
+      <name>Eier dato</name>
+      <shortName>tekn_reg_eier_dato</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
       <name>Avreg.</name>
       <shortName>tekn_avreg_dato</shortName>
       <groupable>true</groupable>
