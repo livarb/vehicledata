@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <datasetFields>
-  <fields>
-    <field>
-      <name>Kjennemerkefarge</name>
-      <shortName>tekn_kjm_farge</shortName>
-      <groupable>true</groupable>
-      <searchable>true</searchable>
-      <content>Farge på kjennemerke (bilskilt)</content>
-    </field>    
+  <fields>    
     <field>
       <name>Reg. 1.gang Norge</name>
       <shortName>tekn_reg_f_g_n</shortName>
@@ -85,6 +78,13 @@
       <searchable>true</searchable>
       <content>Modellbetegnelse</content>
     </field>
+    <field>
+      <name>Kjennemerkefarge</name>
+      <shortName>tekn_kjm_farge</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content>Farge på kjennemerke (bilskilt)</content>
+    </field>    
     <field>
       <name>Teknisk kode</name>
       <shortName>tekn_tknavn</shortName>
