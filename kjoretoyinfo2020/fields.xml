@@ -37,6 +37,20 @@
       <content>Dato for midlertidig avregistrering (YYYYMMDD)</content>
     </field>
     <field>
+      <name>Vraket dato</name>
+      <shortName>tekn_vraket_dato</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
+      <name>Utført dato</name>
+      <shortName>tekn_utfort_dato </shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content></content>
+    </field>
+    <field>
       <name>Reg.status</name>
       <shortName>tekn_reg_status</shortName>
       <groupable>true</groupable>
