@@ -38,7 +38,7 @@
     </field>
     <field>
       <name>Utført dato</name>
-      <shortName>tekn_utfort_dato </shortName>
+      <shortName>tekn_utfort_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
