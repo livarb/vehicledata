@@ -2,49 +2,63 @@
 <datasetFields>
   <fields>    
     <field>
-      <name>Reg. 1.gang Norge</name>
+      <name>Kjennemerkefarge</name>
+      <shortName>tekn_kjm_farge</shortName>
+      <groupable>true</groupable>
+      <searchable>true</searchable>
+      <content>Farge på kjennemerke (bilskilt)</content>
+    </field>    
+    <field>
+      <name>Registreringsår</name>
+      <shortName>tekn_reg_aar</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>År for førstegangsregistrering av kjøretøy (YYYY)</content>
+    </field>
+    <field>
+      <name>Registrert første gang i Norge</name>
       <shortName>tekn_reg_f_g_n</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Dato for registrering første gang i Norge (YYYYMMDD)</content>
     </field>
     <field>
-      <name>Eierskifte dato</name>
-      <shortName>tekn_reg_eierskifte_dato</shortName>
+      <name>Dato eierskifte</name>
+      <shortName>dato_eierskifte</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Dato for eierskifte (YYYYMMDDD)</content>
     </field>    
     <field>
-      <name>Eier dato</name>
-      <shortName>tekn_reg_eier_dato</shortName>
+      <name>Dato registrert på nåværende eier</name>
+      <shortName>dato_reg_naa_eier</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
     </field>
     <field>
-      <name>Avreg.</name>
+      <name>Avregistrert</name>
       <shortName>tekn_avreg_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Dato for midlertidig avregistrering (YYYYMMDD)</content>
     </field>
     <field>
-      <name>Vraket dato</name>
-      <shortName>tekn_vraket_dato</shortName>
+      <name>Dato vraket og endelig avregistrert</name>
+      <shortName>dato_vraking</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Dato for vraking og endelig avregistrering (YYYYMMDD)</content>
     </field>
     <field>
-      <name>Utført dato</name>
-      <shortName>tekn_utfort_dato</shortName>
+      <name>Dato utført og endelig avregistrert</name>
+      <shortName>dato_utfort</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Dato for utførsel og endelig avregistrering (YYYYMMDD)</content>
     </field>
     <field>
-      <name>Reg.status</name>
+      <name>Registreringsstatus</name>
       <shortName>tekn_reg_status</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
@@ -55,164 +69,157 @@
       <shortName>tekn_bruktimp</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Bruktimportert Ja/Nei (1/0)</content>
+      <content>Bruktimportert = 1</content>
     </field>
     <field>
       <name>Merkekode</name>
       <shortName>tekn_merke</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Merkekoder</content>
+      <content>Merkekode (fire siffer med ledende 0)</content>
     </field>
     <field>
       <name>Merkenavn</name>
       <shortName>tekn_merkenavn</shortName>
       <groupable>true</groupable>
       <searchable>true</searchable>
-      <content></content>
+      <content>Teksbeskrivelse av merkekode</content>
     </field>
     <field>
       <name>Modell</name>
       <shortName>tekn_modell</shortName>
       <groupable>false</groupable>
       <searchable>true</searchable>
-      <content>Modellbetegnelse</content>
+      <content>Handelsbetegnelse</content>
     </field>
-    <field>
-      <name>Kjennemerkefarge</name>
-      <shortName>tekn_kjm_farge</shortName>
-      <groupable>true</groupable>
-      <searchable>true</searchable>
-      <content>Farge på kjennemerke (bilskilt)</content>
-    </field>    
     <field>
       <name>Teknisk kode</name>
       <shortName>tekn_tknavn</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Teknisk kode (EU). Hjelpedatasett: Teknisk kode</content>
+      <content>EU-kode for kjøretøygruppe (f.eks. M1 = personbil) (kodeverk)</content>
     </field>
     <field>
       <name>Teknisk underkode</name>
       <shortName>tekn_tuk_verdi</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Teknisk underkode (EU/NO)</content>
+      <content>Kode for spesielle karosserityper eller funksjoner (kodeverk)</content>
     </field>
     <field>
       <name>Avgiftskode</name>
       <shortName>tekn_kjtgrp</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Avgiftskode (NO). Hjelpedatasett: Kjøretøygrupper</content>
+      <content>Avgiftskode (kodeverk)</content>
     </field>
     <field>
       <name>Motorkode</name>
       <shortName>tekn_motorkode</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Motorekode fra fabrikk</content>
+      <content></content>
     </field>    
     <field>
       <name>Effekt</name>
       <shortName>tekn_motorytelse</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Motoreffekt i kW, eldre kjøretøy i hk. En verdi pr. motor</content>
+      <content>Effekt i kW (kan også være hk for eldre kjøretøy)</content>
     </field>
     <field>
       <name>Slagvolum</name>
       <shortName>tekn_slagvolum</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Sylindervolum motor</content>
     </field>
     <field>
       <name>Drivstoffkode</name>
       <shortName>tekn_drivstoff</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>En verdi pr. motor. Hjelpedatasett: Drivstoffkoder</content>
+      <content>Drivstoffkode (nork kodeverk)</content>
     </field>
     <field>
       <name>Girkassetype</name>
       <shortName>tekn_girkasse</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Girkassetype (Man/Aut)</content>
+      <content>Girkassetype (manuell / automat)</content>
     </field>
     <field>
       <name>Hybrid</name>
       <shortName>tekn_hybrid</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Hybrid Ja/Nei/Annen (1/0/9)</content>
+      <content>0=NEI, 1=JA, 9=ANNEN</content>
     </field>
     <field>
       <name>Hybridkategori</name>
       <shortName>tekn_hybrid_kategori</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>Hybridkategori (1=ladbar, 2=ikke ladbar, X=ingen, Z=annen)</content>
+      <content>1=LADBAR, 2=IKKE LADBAR, X=INGEN, Z=ANNEN</content>
     </field>
     <field>
-      <name>Rekkevidde</name>
+      <name>Rekkevidde km</name>
       <shortName>tekn_rekkevidde</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Rekkevidde i km for helelektriske kjøretøy og ladbare hybrider</content>
     </field>
     <field>
-      <name>Effekt pr halvtime</name>
+      <name>Maksimum effekt i 30 minutter</name>
       <shortName>tekn_effekt_pr_halvtime</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Maksimum effekt målt over en halv time for helelektriske kjøretøy og ladbare hybrider</content>
     </field>
     <field>
-      <name>Till. totalvekt</name>
+      <name>Tillatt totalvekt</name>
       <shortName>tekn_totvekt</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt totalvekt</content>
+      <content></content>
     </field>
     <field>
       <name>Egenvekt</name>
       <shortName>tekn_egenvekt</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Egenvekt uten fører (75 kg)</content>
+      <content>Egenvekt uten fører</content>
     </field>
     <field>
-      <name>Till. vogntogvekt</name>
+      <name>Tillatt vogntogvekt</name>
       <shortName>tekn_vogntogvekt</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt vogntogvekt</content>
+      <content>Tillatt vogntogvekt (tillatt totalvekt kjøretøy + tillatt totalvekt tilhenger</content>
     </field>
     <field>
-      <name>Till. taklast</name>
+      <name>Tillatt taklast</name>
       <shortName>tekn_maks_taklast</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt taklast</content>
+      <content></content>
     </field>
     <field>
-      <name>Till. tilh.vekt m/brems</name>
+      <name>Tillatt tilhengervekt med brems</name>
       <shortName>tekn_thv_m_brems</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt tilhengervekt med brems</content>
+      <content></content>
     </field>
     <field>
-      <name>Till. tilh.vekt u/brems</name>
+      <name>Tillatt tilhengervekt uten brems</name>
       <shortName>tekn_thv_u_brems</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt tilhengervekt uten brems</content>
+      <content></content>
     </field>
     <field>
-      <name>Till. koblingslast</name>
+      <name>Tillatt koblingslast</name>
       <shortName>tekn_bel_h_feste</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
@@ -244,56 +251,56 @@
       <shortName>tekn_farge</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Fargekode/r. Hjelpedatasett: Fargekoder</content>
+      <content>Fargekode (kodeverk)</content>
     </field>
     <field>
       <name>Karosseritype</name>
       <shortName>tekn_karosseritype</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Karosseritype (kodeverk)</content>
     </field>
     <field>
       <name>Spesialkarosseri</name>
       <shortName>tekn_spesialkarosseri</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Spesialkarosseri (kodeverk)</content>
     </field>
     <field>
-      <name>Påbygg</name>
+      <name>Påbyggskode</name>
       <shortName>tekn_pabygg</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Påbyggskode (kun for N2/N2G, N3/N3G, O3, O4 (kodeverk)</content>
     </field>
     <field>
       <name>Sitteplasser foran</name>
       <shortName>tekn_sitteplasser_foran</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Antall sitteplasser på seterad 1</content>
     </field>
     <field>
       <name>Sitteplasser totalt</name>
       <shortName>tekn_sitteplasser_totalt</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Antall sitteplasser inkludert fører</content>
     </field>
     <field>
-      <name>Ant. aksler</name>
+      <name>Antall aksler</name>
       <shortName>tekn_aksler</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Antall aksler totalt</content>
     </field>
     <field>
-      <name>Ant.aksler m/drift</name>
+      <name>Antall aksler med drift</name>
       <shortName>tekn_aksler_drift</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Antall aksler med drift</content>
+      <content></content>
     </field>
     <field>
       <name>Akselavstand 1</name>
@@ -310,25 +317,25 @@
       <content>Avstand fra aksel 2 til aksel 3 (forfra)</content>
     </field>
     <field>
-      <name>Dekkdim. aksel 1</name>
+      <name>Dekkdimensjon aksel 1</name>
       <shortName>tekn_dekk_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Dekkdimensjon aksel 1</content>
+      <content>Dekkdimensjon aksel 1 (forfra)</content>
     </field>
     <field>
-      <name>Dekkdim. aksel 2</name>
+      <name>Dekkdimensjon aksel 2</name>
       <shortName>tekn_dekk_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Dekkdimensjon aksel 2</content>
+      <content>Dekkdimensjon aksel 2 (forfra)</content>
     </field>
     <field>
-      <name>Dekkdim. aksel 3</name>
+      <name>Dekkdimensjon aksel 3</name>
       <shortName>tekn_dekk_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Dekkdimensjon aksel 3</content>
+      <content>Dekkdimensjon aksel 3 (forfra)</content>
     </field>
     <field>
       <name>Flere aksler?</name>
@@ -338,88 +345,88 @@
       <content>Verdien 1 angir om det er flere aksler</content>
     </field>
     <field>
-      <name>Felgdim. aksel 1</name>
+      <name>Felgdimensjon aksel 1</name>
       <shortName>tekn_felg_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Felgdimensjon aksel 1</content>
+      <content>Felgdimensjon aksel 1 (forfra)</content>
     </field>
     <field>
-      <name>Felgdim. aksel 2</name>
+      <name>Felgdimensjon aksel 2</name>
       <shortName>tekn_felg_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Felgdimensjon aksel 2</content>
+      <content>Felgdimensjon aksel 2 (forfra)</content>
     </field>
     <field>
-      <name>Felgdim. aksel 3</name>
+      <name>Felgdimensjon aksel 3</name>
       <shortName>tekn_felg_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Felgdimensjon aksel 3</content>
+      <content>Felgdimensjon aksel 3 (forfra)</content>
     </field>
     <field>
       <name>Lastindeks aksel 1</name>
       <shortName>tekn_mili_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Belastningstabell</content>
+      <content>Lastindeks dekk aksel 1</content>
     </field>
     <field>
       <name>Lastindeks aksel 2</name>
       <shortName>tekn_mili_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Belastningstabell</content>
+      <content>Lastindeks dekk aksel 2</content>
     </field>
     <field>
       <name>Lastindeks aksel 3</name>
       <shortName>tekn_mili_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Belastningstabell</content>
+      <content>Lastindeks dekk aksel 3</content>
     </field>
     <field>
       <name>Hastighetskode aksel 1</name>
       <shortName>tekn_hast_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Hastighetstabell</content>
+      <content>Hastighetskode dekk aksel 1</content>
     </field>
     <field>
       <name>Hastighetskode aksel 2</name>
       <shortName>tekn_hast_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Hastighetstabell</content>
+      <content>Hastighetskode dekk aksel 2</content>
     </field>
     <field>
       <name>Hastighetskode aksel 3</name>
       <shortName>tekn_hast_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Hjelpedatasett: Hastighetstabell</content>
+      <content>Hastighetskode dekk aksel 3</content>
     </field>
     <field>
       <name>Innpress aksel 1</name>
       <shortName>tekn_innp_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Innpress felg aksel 1 (for dekk- og felgkombinasjon aksel 1)</content>
     </field>
     <field>
       <name>Innpress aksel 2</name>
       <shortName>tekn_innp_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Innpress felg aksel 2 (for dekk- og felgkombinasjon aksel 2)</content>
     </field>
     <field>
       <name>Innpress aksel 3</name>
       <shortName>tekn_innp_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Innpress felg aksel 3 (for dekk- og felgkombinasjon aksel 3)</content>
     </field>
     <field>
       <name>Sporvidde aksel 1</name>
@@ -443,25 +450,25 @@
       <content></content>
     </field>
     <field>
-      <name>Till. last aksel 1</name>
+      <name>Tillatt last aksel 1</name>
       <shortName>tekn_last_1</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt last aksel 1</content>
+      <content></content>
     </field>
     <field>
-      <name>Till. last aksel 2</name>
+      <name>Tillatt last aksel 2</name>
       <shortName>tekn_last_2</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt last aksel 2</content>
+      <content></content>
     </field>
     <field>
-      <name>Till. last aksel 3</name>
+      <name>Tillatt last aksel 3</name>
       <shortName>tekn_last_3</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Tillatt last aksel 3</content>
+      <content></content>
     </field>
     <field>
       <name>Luft aksel 1</name>
@@ -485,46 +492,46 @@
       <content>Luftfjæring aksel 3</content>
     </field>
     <field>
-      <name>Norsk godkjenningsnr.</name>
+      <name>Norsk godkjenningsnummer</name>
       <shortName>tekn_ngn</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Norsk godkjenningsnummer (NGN)</content>
+      <content>Nasjonalt godkjenningsnummer (NGN)</content>
     </field>
     <field>
-      <name>Typegodkjenningsnr.</name>
+      <name>Typegodkjenningsnummer</name>
       <shortName>tekn_eu_hoved</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>EU typegodkjenningsnummer</content>
+      <content>Typegodkjenning hovednummer</content>
     </field>
     <field>
       <name>Euronorm</name>
       <shortName>tekn_euronorm_ny</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>EU avgasskode. Hjelpedatasett: Euronorm</content>
+      <content>Tilfredsstiller EURO 1L til 6L for lette biler, EURO 1T til 6T for tunge biler, EURO 3M til 5M for motorsykkel, 0 (null) for nullutslipp,U for ukjent eller før EURO ble innført (kodeverk)</content>
     </field>
     <field>
       <name>TG typekode</name>
       <shortName>tekn_eu_type</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>EU typekode</content>
+      <content>Typegodkjenning typekode</content>
     </field>
     <field>
       <name>TG variant</name>
       <shortName>tekn_eu_variant</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>EU variant</content>
+      <content>Typegodkjenning variant</content>
     </field>
     <field>
       <name>TG versjon</name>
       <shortName>tekn_eu_versjon</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>EU versjon</content>
+      <content>Typegodkjenning versjon</content>
     </field>
     <field>
       <name>Siste PKK</name>
@@ -545,14 +552,14 @@
       <shortName>tekn_standstoy</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Måleenhet desibel (dB)</content>
+      <content></content>
     </field>
     <field>
       <name>Partikkelfilter</name>
       <shortName>tekn_partikkelfilter_fabrikkmontert</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content>0 = ukjent/ikke oppgitt, 1 = nei, 2 = ja</content>
+      <content>Montert partikkelfilter = 1</content>
     </field>
     <field>
       <name>NOx mg/km</name>
@@ -587,14 +594,14 @@
       <shortName>tekn_co2_utslipp</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>CO2-utslipp i g/km ("lette biler")</content>
+      <content>CO2-utslipp i g/km (målemetode ikke spesifisert)</content>
     </field>
     <field>
       <name>Drivstofforbruk</name>
       <shortName>tekn_drivstoff_forbruk</shortName>
       <groupable>false</groupable>
       <searchable>false</searchable>
-      <content>Drivstofforbruk i l/100 km</content>
+      <content>Drivstofforbruk i l/100 km (målemetode ikke spesifisert)</content>
     </field>
   </fields>
 </datasetFields>
