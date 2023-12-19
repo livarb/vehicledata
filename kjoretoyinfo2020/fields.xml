@@ -24,14 +24,14 @@
     </field>
     <field>
       <name>Dato eierskifte</name>
-      <shortName>dato_eierskifte</shortName>
+      <shortName>tekn_reg_eierskifte_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Dato for eierskifte (YYYYMMDDD)</content>
     </field>    
     <field>
       <name>Dato registrert på nåværende eier</name>
-      <shortName>dato_reg_naa_eier</shortName>
+      <shortName>tekn_reg_eier_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content></content>
@@ -45,14 +45,14 @@
     </field>
     <field>
       <name>Dato vraket og endelig avregistrert</name>
-      <shortName>dato_vraking</shortName>
+      <shortName>tekn_vraket_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Dato for vraking og endelig avregistrering (YYYYMMDD)</content>
     </field>
     <field>
       <name>Dato utført og endelig avregistrert</name>
-      <shortName>dato_utfort</shortName>
+      <shortName>tekn_utfort_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
       <content>Dato for utførsel og endelig avregistrering (YYYYMMDD)</content>
