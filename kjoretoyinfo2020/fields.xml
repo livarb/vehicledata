@@ -7,13 +7,6 @@
       <groupable>true</groupable>
       <searchable>true</searchable>
       <content>Farge på kjennemerke (bilskilt)</content>
-    </field>    
-    <field>
-      <name>Registreringsår</name>
-      <shortName>tekn_reg_aar</shortName>
-      <groupable>true</groupable>
-      <searchable>false</searchable>
-      <content>År for førstegangsregistrering av kjøretøy (YYYY)</content>
     </field>
     <field>
       <name>Registrert første gang i Norge</name>
