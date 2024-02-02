@@ -27,7 +27,7 @@
       <shortName>tekn_reg_eier_dato</shortName>
       <groupable>true</groupable>
       <searchable>false</searchable>
-      <content></content>
+      <content>Dato for registrering på nåværende eier (YYYYMMDD)</content>
     </field>
     <field>
       <name>Avregistrert</name>
