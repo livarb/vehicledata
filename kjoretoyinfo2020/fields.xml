@@ -9,6 +9,13 @@
       <content>Farge på kjennemerke (bilskilt)</content>
     </field>
     <field>
+      <name>Registrert første gang</name>
+      <shortName>tekn_reg_f_g</shortName>
+      <groupable>true</groupable>
+      <searchable>false</searchable>
+      <content>Dato for førstegangsregistrering i Norge (nytt kjøretøy) eller utland (bruktimportert kjøretøy) (YYYYMMDD)</content>
+    </field>
+    <field>
       <name>Registrert første gang i Norge</name>
       <shortName>tekn_reg_f_g_n</shortName>
       <groupable>true</groupable>
